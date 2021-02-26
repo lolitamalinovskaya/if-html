@@ -1,0 +1,53 @@
+body
+{
+    width: 1440px;
+    height: 569px;
+    background-color: #FFFFFF;
+    margin: 0;
+}
+h1
+{
+font-family: 'Roboto', sans-serif;
+    font-weight: 500;
+    font-style: normal;
+    font-size:40px;
+    width: 306px;
+    line-height: 47px;
+    vertical-align: top;
+    color: #383838;
+padding: 120px 567px 0 567px;
+    margin: 0;
+}
+h1:hover
+{
+    text-decoration: underline;
+    text-decoration-color: skyblue;
+}
+hr
+{
+width: 100px;
+    height: 4px;
+    margin: 20px 670px 0 670px;
+    top: 20px;
+    border: none;
+    background-color: #f5bd41;
+}
+.icons {
+    display: flex;  justify-content: space-around;
+    width: 1233px;
+    vertical-align: middle;
+    padding: 84px 103px 65px 104px;
+}
+.titles {
+    display: flex; justify-content: space-around;
+    font-family: 'Roboto', sans-serif;
+    font-size: 24px;
+    line-height: 28px;
+    width: 1233px;
+    padding: 0 103px 122px 104px;
+    color: #383838;
+}
+p
+{
+    margin: 0;
+}
