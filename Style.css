@@ -1,53 +1,108 @@
-body
-{
+@import url(./fonts);
+
+@font-face {
+    font-family: Roboto;
+    font-weight: 400;
+    font-style: normal;
+    src: url("fonts/Roboto_400_latin.woff2") format('woff2');
+}
+
+@font-face {
+    font-family: Roboto;
+    font-weight: 500;
+    font-style: normal;
+    src: url("fonts/Roboto_500_latin.woff2") format('woff2');
+}
+
+section {
+    box-sizing: border-box;
     width: 1440px;
-    height: 569px;
+    height: 570px;
     background-color: #FFFFFF;
     margin: 0;
 }
-h1
-{
-font-family: 'Roboto', sans-serif;
+
+h2 {
+    font-family: 'Roboto', sans-serif;
     font-weight: 500;
-    font-style: normal;
-    font-size:40px;
-    width: 306px;
-    line-height: 47px;
+    font-size: 40px;
     vertical-align: top;
     color: #383838;
-padding: 120px 567px 0 567px;
+    padding: 120px 567px 0 567px;
     margin: 0;
 }
-h1:hover
-{
-    text-decoration: underline;
-    text-decoration-color: skyblue;
-}
-hr
-{
-width: 100px;
+
+hr {
+    width: 100px;
     height: 4px;
     margin: 20px 670px 0 670px;
-    top: 20px;
     border: none;
     background-color: #f5bd41;
 }
+
+main {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: baseline;
+    box-sizing: border-box;
+    width: 1440px;
+    height: 380px;
+
+}
+
 .icons {
-    display: flex;  justify-content: space-around;
-    width: 1233px;
-    vertical-align: middle;
-    padding: 84px 103px 65px 104px;
-}
-.titles {
-    display: flex; justify-content: space-around;
-    font-family: 'Roboto', sans-serif;
+    font-family: Roboto, sans-serif;
+    font-weight: 400;
     font-size: 24px;
-    line-height: 28px;
-    width: 1233px;
-    padding: 0 103px 122px 104px;
-    color: #383838;
+    text-align: center;
+    padding-top: 85px;
 }
-p
-{
+
+p {
+    padding-top: 55px;
+    margin: 0 auto;
+}
+
+footer {
+    box-sizing: border-box;
+    width: 1440px;
+    height: 630px;
+    background-color: #10367C;
+    display: flex;
+    justify-content: space-around;
+
+}
+
+ul {
+    list-style-type: none;
+    color: #FFFFFF;
+    display: flex;
+    flex-direction: column;
+    padding: 120px 0 0;
     margin: 0;
+
+}
+
+li {
+    font-family: Roboto, sans-serif;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 50px;
+
+}
+
+.first {
+    font-family: Roboto, sans-serif;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 55px;
+
+}
+
+.logo {
+    font-family: Roboto, sans-serif;
+    font-size: 14px;
+    line-height: 20px;
+    padding-top: 160px;
+
 }
