@@ -1,0 +1,129 @@
+@import url(./fonts);
+
+@font-face {
+    font-family: Roboto;
+    font-weight: 400;
+    font-style: normal;
+    src: url("fonts/Roboto_400_latin.woff2") format('woff2');
+}
+
+@font-face {
+    font-family: Roboto;
+    font-weight: 500;
+    font-style: normal;
+    src: url("fonts/Roboto_500_latin.woff2") format('woff2');
+}
+
+body {
+    margin: 0;
+}
+
+section {
+    box-sizing: border-box;
+    width: 1440px;
+    height: 570px;
+    background-color: #FFFFFF;
+    margin: 0;
+
+}
+
+.heading120 {
+    box-sizing: border-box;
+    width: 1440px;
+    height: 166px;
+    display: flex;
+    justify-content: center;
+    padding-top: 120px;
+
+}
+
+
+h2 {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 500;
+    font-size: 40px;
+    color: #383838;
+    margin: 0;
+}
+
+hr {
+    width: 100px;
+    height: 4px;
+    margin: 20px auto 0;
+    border: none;
+    background-color: #f5bd41;
+}
+
+main {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: baseline;
+    box-sizing: border-box;
+    width: 1440px;
+    height: 380px;
+
+}
+
+.icons {
+    font-family: Roboto, sans-serif;
+    font-weight: 400;
+    font-size: 24px;
+    text-align: center;
+    padding-top: 85px;
+}
+
+p {
+    padding-top: 55px;
+    margin: 0 auto;
+}
+
+footer {
+    box-sizing: border-box;
+    width: 1440px;
+    height: 630px;
+    background-color: #10367C;
+
+}
+
+nav {
+    max-width: 1064px;
+    display: flex;
+    justify-content: space-between;
+    padding-left: 104px;
+    padding-top: 120px;
+
+}
+
+ul {
+    list-style-type: none;
+    color: #FFFFFF;
+    margin: 0;
+    padding-inline-start: 0;
+
+}
+
+li {
+    font-family: Roboto, sans-serif;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 50px;
+
+}
+
+.heading_navigation {
+    font-family: Roboto, sans-serif;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 55px;
+
+}
+
+.copyright {
+    font-family: Roboto, sans-serif;
+    font-size: 14px;
+    line-height: 16px;
+    color: #FFFFFF;
+    padding-top: 65px;
+    padding-left: 103px;
+
+}
