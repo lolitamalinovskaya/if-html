@@ -18,6 +18,194 @@ body {
     margin: 0;
 }
 
+.top_section {
+    box-sizing: border-box;
+    width: 1440px;
+    height: 900px;
+    min-height: 100vh;
+    background-image: url("images/background mountains.png");
+    background-position: top center;
+
+}
+
+.top_section_header {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 50px;
+    padding-left: 104px;
+}
+
+.top_section_header_logo {
+    display: inline-grid;
+    grid-template-columns: 890px 85px 1fr 55px 40px;
+    grid-template-rows: 40px 5px;
+    min-width: 1232px;
+}
+
+.Triphouse {
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 1;
+
+}
+
+.stays {
+    grid-column-start: 2;
+    grid-column-end: 3;
+    grid-row-start: 1;
+    font: 400 24px Roboto;
+    color: #FFFFFF;
+    margin: 0;
+    padding-top: 5px;
+
+}
+
+.top_section_header_stays_hr {
+    grid-column-start: 2;
+    grid-column-end: 3;
+    grid-row-start: 2;
+    width: 50px;
+    height: 0;
+    border: 3px solid #F5BD41;
+    padding: 0;
+    margin: 0;
+
+}
+
+.attractions {
+    grid-column-start: 3;
+    grid-column-end: 4;
+    grid-row-start: 1;
+    font: 400 24px Roboto;
+    color: #FFFFFF;
+    margin: 0;
+    padding-top: 5px;
+}
+
+.top_section_header_attractions_hr {
+    grid-column-start: 3;
+    grid-column-end: 4;
+    grid-row-start: 2;
+    grid-row-end: 2;
+    width: 110px;
+    height: 0;
+    border: 3px solid #F5BD41;
+    padding: 0;
+    margin: 0;
+
+}
+
+.night {
+    grid-column-start: 4;
+    grid-column-end: 5;
+    grid-row-start: 1;
+    padding-top: 5px;
+}
+
+.accountCircle {
+    grid-column-start: 5;
+    grid-column-end: 6;
+    grid-row-start: 1;
+}
+
+.discoverStays {
+    font-family: Roboto, sans-serif;
+    font-weight: 500;
+    font-size: 50px;
+    color: #FFFFFF;
+    line-height: 58px;
+    display: flex;
+    padding-left: 104px;
+    padding-top: 202px;
+    margin: 0;
+}
+
+.top_section_main_all_form {
+    display: flex;
+    box-sizing: border-box;
+    max-width: 1232px;
+    align-items: center;
+    margin: auto;
+    padding-top: 100px;
+
+}
+
+.top_section_input_label {
+    display: inline-grid;
+    grid-template-columns: 465px 1fr 1fr 190px;
+    grid-template-rows: 45px 1fr;
+}
+
+.top_section_input_label_for_destination {
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 1;
+    grid-row-end: 2;
+    margin-left: 10px;
+    margin-bottom: 24px;
+    font: 400 18px Roboto;
+    color: #FFFFFF;
+
+}
+
+.top_section_input_label_for_check_in {
+    grid-column-start: 2;
+    grid-column-end: 3;
+    grid-row-start: 1;
+    grid-row-end: 2;
+    margin-left: 10px;
+    margin-bottom: 24px;
+    font: 400 18px Roboto;
+    color: #FFFFFF;
+}
+
+.top_section_input {
+    grid-column-start: 1;
+    grid-column-end: 5;
+    grid-row-start: 2;
+    grid-row-end: 2;
+    display: grid;
+    grid-template-columns: 465px 1fr 1fr 190px;
+    background: #FFFFFF;
+    border-radius: 8px;
+    border-style: none;
+    padding: 0;
+    max-width: 1232px;
+    min-width: 1232px;
+}
+
+input {
+    box-sizing: border-box;
+    height: 65px;
+    width: 100%;
+    border-style: none;
+    border-radius: 8px;
+    padding-left: 15px;
+    font: 400 18px Roboto;
+}
+
+input:focus {
+    border: 3px solid #f5bd41;
+    outline: none;
+}
+
+.input-button {
+    font: 500 24px Roboto;
+    color: #FFFFFF;
+    height: 100%;
+    width: 100%;
+    background: #3077C6;
+}
+
+.top_section_main_AppStore_GooglePlay {
+    display: flex;
+    box-sizing: border-box;
+    max-width: 270px;
+    justify-content: space-between;
+    padding-top: 120px;
+    margin: auto;
+}
+
 section {
     box-sizing: border-box;
     width: 1440px;
@@ -46,7 +234,7 @@ h2 {
     margin: 0;
 }
 
-hr {
+.what_DoWe_Offer_hr {
     width: 100px;
     height: 4px;
     margin: 20px auto 0;
@@ -54,7 +242,7 @@ hr {
     background-color: #f5bd41;
 }
 
-main {
+.whatDoWeOffer {
     display: flex;
     justify-content: space-evenly;
     align-items: baseline;
@@ -72,7 +260,7 @@ main {
     padding-top: 85px;
 }
 
-p {
+.iconsName {
     padding-top: 55px;
     margin: 0 auto;
 }

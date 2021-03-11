@@ -2,33 +2,94 @@
 <html lang="en" xmlns="http://www.w3.org/1999/html">
 <head>
     <meta charset="UTF-8">
-    <title>What do we offer</title>
+    <title>TripHouse</title>
     <link href="Style.css" rel="stylesheet">
 </head>
 <body>
+<section class="top_section">
+    <header class="top_section_header">
+        <div class=" top_section_header_logo">
+            <img src="images/logo_vector.svg" alt="Triphouse" class="Triphouse">
+            <p class="stays"> Stays </p><hr class="top_section_header_stays_hr">
+            <p class="attractions"> Attractions</p><hr class="top_section_header_attractions_hr">
+            <img src="images/Night.svg" alt="Night" class="night">
+            <img src="images/AccountCircle.svg" alt="AccountCircle" class="accountCircle">
+        </div>
+    </header>
+    <main class="top_section_main">
+        <h1 class="discoverStays"> Discover stays <br> to live, work or just relax</h1>
+
+        <div class="top_section_main_all_form">
+            <div class="top_section_input_label">
+                <div class="top_section_input_label_for_destination">
+                    <label>Your destination or hotel name</label>
+                </div>
+                <div class="top_section_input_label_for_check_in">
+                    <label class="home-label-search" for="date">Check-in — Check-out</label>
+                </div>
+                <form class="top_section_input">
+                    <div>
+                        <input
+                                class="input-destination"
+                                id="city"
+                                type="text"
+                                name="destination"
+                                placeholder="Destination"
+                                value="New York">
+                    </div>
+                    <div class="input-destination">
+                        <input
+                                class="input-date"
+                                id="date"
+                                type="date"
+                                name="calendar"
+                                placeholder="Date">
+                    </div>
+                    <div class="input-destination">
+                        <label for="information_about_order"></label>
+                        <input
+                                class="input-room"
+                                id="information_about_order"
+                                type="text"
+                                name="room"
+                                value="2 Adults — 0 Children — 1 Room">
+                    </div>
+                    <div class="input-destination">
+                        <input class="input-button" type="submit" name="search" value="Search">
+                    </div>
+                </form>
+            </div>
+        </div>
+        <div class="top_section_main_AppStore_GooglePlay">
+            <img src="images/google-play-badge.svg" alt="GooglePlay">
+            <img src="images/App_Store_Badge.svg" alt="AppStore">
+        </div>
+    </main>
+
+</section>
 <section>
     <header>
         <div class="heading120">
             <h2> What do we offer</h2>
         </div>
-        <hr>
+        <hr class="what_DoWe_Offer_hr">
     </header>
-    <main>
+    <main class="whatDoWeOffer">
         <div class="icons">
             <img src="images/support.svg" alt="headphones">
-            <p> Support 24/7</p>
+            <p class="iconsName"> Support 24/7</p>
         </div>
         <div class="icons">
             <img src="images/communicate_directly.svg" alt="dialog window">
-            <p> Communicate directly</p>
+            <p class="iconsName"> Communicate directly</p>
         </div>
         <div class="icons">
             <img src="images/book_online.svg" alt="book online">
-            <p> Book online</p>
+            <p class="iconsName"> Book online</p>
         </div>
         <div class="icons">
             <img src="images/real_guest_reviews.svg" alt="like">
-            <p> Real guest reviews</p>
+            <p class="iconsName"> Real guest reviews</p>
         </div>
     </main>
 </section>
