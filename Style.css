@@ -29,83 +29,75 @@ body {
 }
 
 .top_section_header {
+    box-sizing: border-box;
+    width: 1230px;
+    height: 90px;
+    margin: auto;
     display: flex;
+    flex-direction: row;
     justify-content: space-between;
-    padding-top: 50px;
-    padding-left: 104px;
+    align-items: flex-end;
+    align-content: baseline;
 }
 
 .top_section_header_logo {
-    display: inline-grid;
-    grid-template-columns: 890px 85px 1fr 55px 40px;
-    grid-template-rows: 40px 5px;
-    min-width: 1232px;
+    align-items: flex-start;
 }
 
-.Triphouse {
-    grid-column-start: 1;
-    grid-column-end: 2;
-    grid-row-start: 1;
+.top_section_header_stays_attractions_night_accountCircle {
+    display: flex;
+    width: 350px;
+    height: 45px;
+    justify-content: space-between;
 
 }
 
-.stays {
-    grid-column-start: 2;
-    grid-column-end: 3;
-    grid-row-start: 1;
+.top_section_header_night_accountCircle {
+    display: flex;
+    width: 95px;
+    height: 45px;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.top_section_header_stays_attractions {
+    display: flex;
+    flex-direction: row;
+    width: 200px;
+    height: 45px;
+    justify-content: space-between;
+    align-items: center;
     font: 400 24px Roboto;
     color: #FFFFFF;
-    margin: 0;
-    padding-top: 5px;
-
+    align-content: space-between;
 }
 
-.top_section_header_stays_hr {
-    grid-column-start: 2;
-    grid-column-end: 3;
-    grid-row-start: 2;
+.stays, .attractions {
+    margin: 0;
+}
+
+.stays::after {
+    content: "";
+    height: 4px;
     width: 50px;
-    height: 0;
-    border: 3px solid #F5BD41;
-    padding: 0;
-    margin: 0;
-
+    background-color: #F5BD41;
+    display: block;
+    position: relative;
+    top: 10px;
+    left: calc((100% - (50px)) / 2);
+    margin-top: -4px;
 }
 
-.attractions {
-    grid-column-start: 3;
-    grid-column-end: 4;
-    grid-row-start: 1;
-    font: 400 24px Roboto;
-    color: #FFFFFF;
-    margin: 0;
-    padding-top: 5px;
-}
-
-.top_section_header_attractions_hr {
-    grid-column-start: 3;
-    grid-column-end: 4;
-    grid-row-start: 2;
-    grid-row-end: 2;
+.attractions:hover::after {
+    content: "";
+    height: 4px;
     width: 110px;
-    height: 0;
-    border: 3px solid #F5BD41;
-    padding: 0;
-    margin: 0;
-
-}
-
-.night {
-    grid-column-start: 4;
-    grid-column-end: 5;
-    grid-row-start: 1;
-    padding-top: 5px;
-}
-
-.accountCircle {
-    grid-column-start: 5;
-    grid-column-end: 6;
-    grid-row-start: 1;
+    background-color: #F5BD41;
+    display: block;
+    position: relative;
+    top: 10px;
+    left: calc((100% - (110px)) / 2);
+    margin-top: -4px;
 }
 
 .discoverStays {
@@ -120,89 +112,135 @@ body {
     margin: 0;
 }
 
-.top_section_main_all_form {
+.top_section_main {
+    box-sizing: border-box;
+    width: 1440px;
+    height: 810px;
+}
+
+.top_section_main_general_label {
     display: flex;
     box-sizing: border-box;
-    max-width: 1232px;
-    align-items: center;
-    margin: auto;
-    padding-top: 100px;
-
-}
-
-.top_section_input_label {
-    display: inline-grid;
-    grid-template-columns: 465px 1fr 1fr 190px;
-    grid-template-rows: 45px 1fr;
-}
-
-.top_section_input_label_for_destination {
-    grid-column-start: 1;
-    grid-column-end: 2;
-    grid-row-start: 1;
-    grid-row-end: 2;
-    margin-left: 10px;
-    margin-bottom: 24px;
+    height: 145px;
+    width: 760px; /*на самом деле 640*/
+    justify-content: space-between;
+    align-items: flex-end;
+    flex-direction: row;
+    padding-left: 130px;
+    padding-bottom: 25px;
     font: 400 18px Roboto;
-    color: #FFFFFF;
-
-}
-
-.top_section_input_label_for_check_in {
-    grid-column-start: 2;
-    grid-column-end: 3;
-    grid-row-start: 1;
-    grid-row-end: 2;
-    margin-left: 10px;
-    margin-bottom: 24px;
-    font: 400 18px Roboto;
+    line-height: 21px;
     color: #FFFFFF;
 }
 
-.top_section_input {
-    grid-column-start: 1;
-    grid-column-end: 5;
-    grid-row-start: 2;
-    grid-row-end: 2;
-    display: grid;
-    grid-template-columns: 465px 1fr 1fr 190px;
-    background: #FFFFFF;
-    border-radius: 8px;
-    border-style: none;
-    padding: 0;
-    max-width: 1232px;
-    min-width: 1232px;
-}
-
-input {
+.top_section_main_form_background {
+    display: flex;
     box-sizing: border-box;
     height: 65px;
-    width: 100%;
-    border-style: none;
-    border-radius: 8px;
-    padding-left: 15px;
-    font: 400 18px Roboto;
+    width: 1230px;
+    justify-content: center;
+    margin: auto;
+    align-items: baseline;
+    background-color: #F5BD41;
+    border-radius: 8px
+
 }
 
-input:focus {
-    border: 3px solid #f5bd41;
+.top_section_main_form {
+    display: flex;
+    box-sizing: border-box;
+    height: 65px;
+    width: 1230px;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: auto;
+    align-items: baseline;
+    background-color: #FFFFFF;
+    border-radius: 8px;
+
+}
+
+#destination {
+    align-items: center;
+    box-sizing: border-box;
+    align-self: center;
+    height: 65px;
+    width: 467px;
+    border: 3px solid transparent;
+    border-radius: 8px;
+    font: 400 18px Roboto;
+    padding: 0;
+}
+
+
+#destination:focus, #information_about_order:focus, #top_section_main_input_for_check-in_check-out:focus {
+    border-radius: 8px;
+    border: 3px solid #F5BD41;
     outline: none;
 }
 
-.input-button {
+#destination::placeholder, #information_about_order::placeholder { /* working*/
+    font: 400 18px Roboto;
+    line-height: 21px;
+    color: #383838;
+    padding-left: 24px;
+}
+
+#check-in, #check-out {
+    font: 400 18px Roboto;
+    border: none;
+    border-radius: 8px;
+    outline: none;
+}
+
+#top_section_main_input_for_check-in_check-out { /*как настроить плэйсхолдер на текст а не на дату?*/
+    display: flex;
+    box-sizing: border-box;
+    height: 65px;
+    width: 260px;
+    align-self: center;
+    justify-content: center;
+    border: 3px solid #F5BD41;
+    border-radius: 8px;
+    font: 400 18px Roboto;
+    text-align: center;
+    padding: 0;
+    background-color: #FFFFFF;
+}
+
+#information_about_order {
+    display: flex;
+    box-sizing: border-box;
+    align-self: center;
+    height: 65px;
+    width: 314px;
+    justify-content: flex-end;
+    align-items: center;
+    border: 3px solid transparent;
+    border-radius: 8px;
+    font: 400 18px Roboto;
+
+}
+
+#input-button {
+    justify-content: flex-end;
+    align-items: baseline;
     font: 500 24px Roboto;
     color: #FFFFFF;
     height: 100%;
-    width: 100%;
+    width: 190px;
     background: #3077C6;
+    border-radius: 8px;
+    border: none;
 }
 
 .top_section_main_AppStore_GooglePlay {
     display: flex;
     box-sizing: border-box;
     max-width: 270px;
+    height: 160px;
     justify-content: space-between;
-    padding-top: 120px;
+    align-items: flex-end;
     margin: auto;
 }
 
