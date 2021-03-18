@@ -14,118 +14,67 @@
     src: url("fonts/Roboto_500_latin.woff2") format('woff2');
 }
 
-/*@media only screen and (max-width: 1232px) {
+@media only screen and (max-width: 1232px) {
 
-    .col-lg-1 {
-        width: var(--one-col-lg-width);
-    }
-    .col-lg-2 {
-        width: calc(var(--one-col-lg-width)*2);
-    }
-    .col-lg-3 {
-        width: calc(var(--one-col-lg-width)*3);
-    }
-    .col-lg-4 {
-        width: calc(var(--one-col-lg-width)*4);
-    }
-    .col-lg-5 {
-        width: calc(var(--one-col-lg-width)*5);
-    }
-    .col-lg-6 {
-        width: calc(var(--one-col-lg-width)*6);
-    }
-    .col-lg-7 {
-        width: 50%;
-    }
-    .col-lg-8 {
-        width: calc(var(--one-col-lg-width)*8);
-    }
-    .col-lg-9 {
-        width: calc(var(--one-col-lg-width)*9);
-    }
-    .col-lg-10 {
-        width: calc(var(--one-col-lg-width)*10);
-    }
-    .col-lg-11 {
-        width: calc(var(--one-col-lg-width)*11);
-    }
-    .col-lg-12 {
-        width: calc(var(--one-col-lg-width)*12);
-    }
-    .col-lg-13 {
-        width: calc(var(--one-col-lg-width)*13);
-    }
-    .col-lg-14 {
-        width: 100%;
-    }
 
-}
-@media only screen and (max-width: 768px) {
-    .col-md-1 {
-        width: var(--one-col-lg-width);
-    }
-    .col-md-2 {
-        width: calc(var(--one-col-lg-width)*2);
-    }
-    .col-md-3 {
-        width: calc(var(--one-col-lg-width)*3);
-    }
-    .col-md-4 {
-        width: calc(var(--one-col-lg-width)*4);
-    }
-    .col-md-5 {
-        width: calc(var(--one-col-lg-width)*5);
-    }
-    .col-md-6 {
-        width: calc(var(--one-col-lg-width)*6);
-    }
-    .col-md-7 {
-        width: 50%;
-    }
-    .col-md-8 {
-        width: calc(var(--one-col-lg-width)*8);
-    }
-    .col-md-9 {
-        width: calc(var(--one-col-lg-width)*9);
-    }
-    .col-md-10 {
-        width: calc(var(--one-col-lg-width)*10);
-    }
-    .col-md-11 {
-        width: calc(var(--one-col-lg-width)*11);
-    }
-    .col-md-12 {
-        width: calc(var(--one-col-lg-width)*12);
-    }
-    .col-md-13 {
-        width: calc(var(--one-col-lg-width)*13);
-    }
-    .col-md-14 {
-        width: 100%;
-    }
-
-}
-@media only screen and (max-width: 360px) {
     .col-1 {
         width: var(--one-col-width);
     }
+
     .col-2 {
-        width: calc(var(--one-col-width)*2);
+        width: calc(var(--one-col-width) * 2);
     }
+
     .col-3 {
-        width: calc(var(--one-col-width)*3);
+        width: calc(var(--one-col-width) * 3);
     }
+
     .col-4 {
-        width: calc(var(--one-col-width)*4);
+        width: calc(var(--one-col-width) * 4);
     }
+
     .col-5 {
-        width: calc(var(--one-col-width)*5);
+        width: calc(var(--one-col-width) * 5);
     }
+
     .col-6 {
+        width: calc(var(--one-col-width) * 6);
+    }
+
+    .col-7 {
+        width: calc(var(--one-col-width) * 7); /*50%*/
+    }
+
+    .col-8 {
+        width: calc(var(--one-col-width) * 8);
+    }
+
+    .col-9 {
+        width: calc(var(--one-col-width) * 9);
+    }
+
+    .col-10 {
+        width: calc(var(--one-col-width) * 10);
+    }
+
+    .col-11 {
+        width: calc(var(--one-col-width) * 11);
+    }
+
+    .col-12 {
+        width: calc(var(--one-col-width) * 12);
+    }
+
+    .col-13 {
+        width: calc(var(--one-col-width) * 13);
+    }
+
+    .col-14 {
         width: 100%;
     }
 
-}*/
+}
+
 :root {
     --primary: #3077C6;
     --primary-dark: #10367c;
@@ -138,8 +87,9 @@
     --general-white: #FFFFFF;
     --secondary-text: #BFBFBF;
     --bg-color-main: #EAF0F9;
-    /*--one-col-lg-width: 7.1428%;
-    --one-col-width: 16.6666%*/
+    --one-col-width: calc(100% *1 / 14);
+    --one-col-md-width: calc(100% *1 / 6);
+
 }
 
 body {
@@ -150,11 +100,12 @@ body {
     box-sizing: border-box;
     width: 100%;
     max-width: 1440px;
-    /*height: auto;*/
+    height: 100%;
     min-height: 100vh;
     background-image: url("images/background mountains.png");
     background-blend-mode: darken;
     background-position: top center;
+    background-repeat: no-repeat;
 }
 
 .top_section_header {
@@ -173,21 +124,37 @@ body {
     align-items: flex-start;
 
 }
+.logo_trip_house {
+    width: 205px;
+    height: 40px;
+}
+
 
 .top_section_header_stays_attractions_night_accountCircle {
     display: flex;
-    width: 350px;
-    height: 45px;
+    width: 350px;/*350px*/
+    /*height: 45px;*/
     justify-content: space-between;
-
 }
 
 .top_section_header_night_accountCircle {
     display: flex;
-    width: 95px;
+    width: 95px; /* /1440*/
     height: 45px;
     justify-content: space-between;
     align-items: center;
+}
+.night {
+    width: 30px;
+    height: 30px;
+}
+.account_circle {
+    width: 40px;
+    height: 40px;
+}
+
+.top_section_menu {
+    display: none;
 }
 
 .top_section_header_stays_attractions {
@@ -238,6 +205,7 @@ body {
     display: flex;
     padding-left: 104px;
     padding-top: 202px;
+    flex-wrap: wrap;
     margin: 0;
 }
 
@@ -250,7 +218,7 @@ body {
 .top_section_main_general_label {
     display: flex;
     box-sizing: border-box;
-    min-height: 145px; /**/
+    min-height: 145px;
     width: 52.777%; /*760px/1440px *на самом деле 640*/
     justify-content: space-between;
     align-items: flex-end;
@@ -261,24 +229,12 @@ body {
     color: var(--general-white);
 }
 
-.top_section_main_form_background {
-    display: flex;
-    box-sizing: border-box;
-    /* height: 65px;*/ /*thinking about it*/
-    width: 85.4166%; /*1230px/1440*/
-    justify-content: center;
-    margin: auto;
-    align-items: baseline;
-    background-color: var(--secondary);
-    border-radius: 8px
-
-}
 
 .top_section_main_form {
     display: flex;
     box-sizing: border-box;
     height: 65px; /*thinking about it*/
-    width: 85.4166%; /*1230px/1440*/
+    max-width: 1230px; /*1230px/1440*/
     justify-content: space-between;
     margin: auto;
     align-items: baseline;
@@ -292,7 +248,7 @@ body {
     box-sizing: border-box;
     align-self: center;
     height: 65px;
-    width: 32.43%; /*467px / 1440*/
+    width: 467px; /*467px / 1440*/
     border: 3px solid transparent;
     border-radius: 8px;
     font: 400 18px Roboto;
@@ -324,7 +280,7 @@ body {
     display: flex;
     box-sizing: border-box;
     height: 65px;
-    width: 18.05%; /*260px / 1440*/
+    width: 260px; /*260px / 1440*/
     align-self: center;
     justify-content: center;
     border: 3px solid var(--secondary);
@@ -340,7 +296,7 @@ body {
     box-sizing: border-box;
     align-self: center;
     height: 65px;
-    width: 21.805%; /*314px*/
+    width: 314px; /*314px*/
     justify-content: flex-end;
     align-items: center;
     border: 3px solid transparent;
@@ -354,8 +310,8 @@ body {
     align-items: baseline;
     font: 500 24px Roboto;
     color: var(--general-white);
-    height: 100%;
-    width: 13.194%; /*190px*/
+    height: 65px;
+    width: 190px; /*190px*/
     background: var(--primary);
     border-radius: 8px;
     border: none;
@@ -365,19 +321,27 @@ body {
 .top_section_main_AppStore_GooglePlay {
     display: flex;
     box-sizing: border-box;
-    max-width: 18.75%; /*270px/1440*/
+    max-width: 270px; /*270px/1440*/
     padding-top: 120px;
     /* height: 160px;*/
     justify-content: space-between;
     align-items: flex-end;
     margin: auto;
 }
+.google_play_badge {
+    width: 135px;
+    height: 40px;
+}
+.app_store_badge {
+    width: 120px;
+    height: 40px;
+}
 
 .section_what_do_we_offer {
     box-sizing: border-box;
     width: 100%;
     max-width: 1440px;
-    /* max-height: 100%;*/
+    min-height: 570px;
     background-color: var(--general-white);
     margin: 0;
 
@@ -390,7 +354,6 @@ body {
     display: flex;
     justify-content: center;
 
-
 }
 
 .what_do_we_offer_header_h2 {
@@ -402,13 +365,18 @@ body {
     padding-top: 120px;
 }
 
-.what_DoWe_Offer_header_hr {
-    width: 100px;
+.what_do_we_offer_header_h2::after {
+    content: "";
     height: 4px;
-    margin: 20px auto 0;
-    border: none;
+    width: 100px;
     background-color: var(--secondary);
+    display: block;
+    position: relative;
+    top: 25px;
+    left: calc((100% - (100px)) / 2);
+    margin-top: -4px;
 }
+
 
 .what_do_we_offer_main {
     display: flex;
@@ -416,9 +384,7 @@ body {
     align-items: baseline;
     box-sizing: border-box;
     width: 100%;
-    /*height: 380px;*/
-
-
+    min-height: 400px;
 }
 
 .what_do_we_offer_main_icons {
@@ -426,8 +392,25 @@ body {
     font-weight: 400;
     font-size: 24px;
     text-align: center;
-    padding-top: 85px;
+    padding-top: 115px;
 
+}
+
+.headphones_support {
+    width: 76px;
+    height: 92px;
+}
+.communicate_directly {
+    width: 84px;
+    height: 84px;
+}
+.book_online {
+    width: 100px;
+    height: 68px;
+}
+.like_real_guest_reviews {
+    width: 92px;
+    height: 84px;
 }
 
 .what_do_we_offer_main_iconsName {
@@ -435,53 +418,11 @@ body {
     margin: 0 auto;
 }
 
-@media only screen and (max-width: 360px) {
-    .what_DoWe_Offer_header_hr {
-        display: none;
-    }
-
-    .what_do_we_offer_header_h2 {
-        font-size: 28px;
-        padding-top: 25px;
-    }
-
-    .what_do_we_offer_main {
-        display: flex;
-        box-sizing: border-box;
-        width: 100%;
-        flex-wrap: wrap;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-    }
-
-    .what_do_we_offer_main:last-child {
-        padding-bottom: 40px;
-
-    }
-
-    .what_do_we_offer_main_icons {
-        font-size: 15px;
-        padding-top: 30px;
-        flex-wrap: wrap;
-
-    }
-
-    .what_do_we_offer_main_iconsName {
-        padding-top: 15px;
-        margin: 0 auto;
-    }
-
-    .offers_icon_svg {
-        max-width: 70%;
-    }
-}
-
-
 footer {
     box-sizing: border-box;
     width: 100%;
-    /*height: 630px;*/
+    max-width: 1440px;
+    height: 630px;
     background-color: var(--primary-dark);
 
 }
@@ -495,7 +436,7 @@ footer {
     display: flex;
     justify-content: space-between;
     padding-left: 104px;
-    padding-top: 120px;
+    padding-top: 115px;
 
 }
 
@@ -532,11 +473,216 @@ ul {
     padding-left: 103px;
 }
 
-@media only screen and (max-width: 360px) {
+@media only screen and (max-width: 768px) {
+    .col-md-1 {
+        width: var(--one-col-md-width);
+    }
+
+    .col-md-2 {
+        width: calc(var(--one-col-md-width) * 2);
+    }
+
+    .col-md-3 {
+        width: calc(var(--one-col-md-width) * 3); /*50%*/
+    }
+
+    .col-md-4 {
+        width: calc(var(--one-col-md-width) * 4);
+    }
+
+    .col-md-5 {
+        width: calc(var(--one-col-md-width) * 5);
+    }
+
+    .col-md-6 {
+        width: 100%;
+    }
+
+    .top_section {
+        background-position: right;
+
+    }
+
+    .logo_trip_house {
+        width: 125px;
+        height: 25px;
+    }
+
+    .stays, .attractions {
+        display: none;
+    }
+
+    .night {
+        width: 16px;
+        height: 16px;
+    }
+
+    .account_circle {
+        width: 24px;
+        height: 24px;
+    }
+
+    .top_section_menu {
+        width: 24px;
+        height: 16px;
+        display: flex;
+    }
+
+    .what_DoWe_Offer_header_hr {
+        display: none;
+    }
+
+    .top_section_header {
+        padding-top: 15px;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .top_section_header_stays_attractions_night_accountCircle {
+        display: flex;
+        max-width: 205px;
+        justify-content: flex-end;
+    }
+
+    .top_section_header_night_accountCircle {
+        display: flex;
+        min-width: 95px;
+        height: 45px;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .top_section_header_stays_attractions, .stays, .attractions {
+        display: none;
+    }
+
+    .discoverStays {
+        font-size: 30px;
+        padding: 50px 0 0 0;
+        justify-content: center;
+        flex-wrap: wrap;
+        line-height: 35px
+    }
+
+    .top_section_main_general_label {
+        display: none;
+    }
+
+    .top_section_main_form_background {
+        /*display: flex;
+        flex-wrap: wrap;
+        box-sizing: border-box;*/
+        height: 43.5vh; /*thinking about it*/
+        width: 90vw; /*1230px/1440*/
+        /*justify-content: center;
+        !*margin: auto;*!
+        align-items: baseline;*/
+        border-radius: 0;
+        margin: 30px auto;
+    }
+
+    .top_section_main_form {
+        display: flex;
+        flex-wrap: wrap;
+        float: left;
+        box-sizing: border-box;
+        height: 40vh; /*thinking about it*/
+        width: 85vw;
+        /* height: 65px;*/ /*thinking about it*/
+        /*width: 85.4166%; *//*1230px/1440*/
+        justify-content: space-between;
+        align-items: center;
+        background-color: var(--secondary);
+    }
+
+    #input-button {
+        justify-content: flex-end;
+        align-items: baseline;
+        color: var(--general-white);
+        height: 20%;
+        width: 85vw; /*190px*/
+        border-radius: 8px;
+
+    }
+
+    #destination, #top_section_main_input_for_check-in_check-out, #information_about_order {
+        height: 20%;
+    }
+
+
+    .top_section_main_AppStore_GooglePlay {
+        max-width: 270px;
+        padding-top: 35px;
+
+    }
+
+    .what_do_we_offer_header_h2 {
+        font-size: 28px;
+        padding-top: 25px;
+        margin: auto;
+    }
+
+    .what_do_we_offer_header_h2::after {
+        display: none;
+    }
+
+    .what_do_we_offer_main {
+        display: flex;
+        box-sizing: border-box;
+        width: 100%;
+        flex-wrap: wrap;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .what_do_we_offer_main:last-child {
+        padding-bottom: 40px;
+
+    }
+
+    .what_do_we_offer_main_icons {
+        font-size: 15px;
+        padding-top: 35px;
+        flex-wrap: wrap;
+
+    }
+
+    .what_do_we_offer_main_iconsName {
+        padding-top: 15px;
+        margin: 0 auto;
+    }
+
+    .headphones_support {
+        width: 53px;
+        height: 64px;
+    }
+
+    .communicate_directly {
+        width: 58px;
+        height: 58px;
+    }
+
+    .book_online {
+        width: 70px;
+        height: 47px;
+    }
+
+    .like_real_guest_reviews {
+        width: 64px;
+        height: 58px;
+    }
+    footer {
+        max-height: 205px;
+    }
     .logo_trip_house_for_footer {
         display: flex;
         justify-content: center;
         padding-top: 40px;
+    }
+    .logo_for_footer {
+        width: 98px;
+        height: 19px;
     }
 
     .footer_navigation_list {
@@ -564,5 +710,4 @@ ul {
         justify-content: center;
 
     }
-
 }
