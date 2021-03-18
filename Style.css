@@ -88,7 +88,7 @@ body {
     margin-top: -4px;
 }
 
-.attractions:hover::after {
+.attractions:hover::after, .stays:hover::after{
     content: "";
     height: 4px;
     width: 110px;
@@ -131,19 +131,6 @@ body {
     font: 400 18px Roboto;
     line-height: 21px;
     color: #FFFFFF;
-}
-
-.top_section_main_form_background {
-    display: flex;
-    box-sizing: border-box;
-    height: 65px;
-    width: 1230px;
-    justify-content: center;
-    margin: auto;
-    align-items: baseline;
-    background-color: #F5BD41;
-    border-radius: 8px
-
 }
 
 .top_section_main_form {
