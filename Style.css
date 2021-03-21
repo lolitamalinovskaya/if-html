@@ -93,17 +93,16 @@ body {
     margin: 0;
 }
 
+
 .top_section {
 
     box-sizing: border-box;
-    width: 100%;
-    max-width: 1440px;
     max-height: 900px;
     min-height: 100vh;
     background-image: url("images/background mountains.png");
-    background-blend-mode: darken;
     background-position: top center;
     background-repeat: no-repeat;
+    background-size: cover;
 
 }
 
@@ -175,7 +174,7 @@ body {
     background-color: var(--secondary);
     display: block;
     position: relative;
-    top: 10px;
+    top: 15px;
     left: calc((100% - (50px)) / 2);
     margin-top: -4px;
 }
@@ -183,7 +182,7 @@ body {
 .attractions:hover::after {
 
     width: 110px;
-    top: 10px;
+    top: 15px;
     left: calc((100% - (110px)) / 2);
 
 }
@@ -318,8 +317,6 @@ body {
 
 .section_what_do_we_offer {
     box-sizing: border-box;
-    width: 100%;
-    max-width: 1440px;
     min-height: 570px;
     background-color: var(--general-white);
     margin: 0;
@@ -328,7 +325,6 @@ body {
 
 .what_do_we_offer_header_heading120,.homes_guests_loves_header_heading120 {
     box-sizing: border-box;
-    width: 100%;
     display: flex;
     justify-content: center;
 
@@ -358,7 +354,6 @@ body {
     justify-content: space-evenly;
     align-items: baseline;
     box-sizing: border-box;
-    width: 100%;
     min-height: 400px;
 }
 
@@ -396,8 +391,6 @@ body {
 
 .homes_guests_loves {
     box-sizing: border-box;
-    width: 100%;
-    max-width: 1440px;
     height: 830px;
     background-color: var(--bg-color-main);
     margin: 0;
@@ -442,13 +435,11 @@ figure img{
 .arrow_position {
     position: absolute;
     padding-left: 98.5%; /*1200px;*/
-    padding-top: 10%;/*140px;*/
+    padding-top: 9%;/*140px;*/
 }
 
 footer {
     box-sizing: border-box;
-    width: 100%;
-    max-width: 1440px;
     height: 630px;
     background-color: var(--primary-dark);
 
@@ -468,9 +459,7 @@ footer {
 }
 
 .footer_navigation_heading {
-    font-family: Roboto, sans-serif;
-    font-weight: 500;
-    font-size: 20px;
+    font: 500 20px 'Roboto';
     line-height: 55px;
 
 }
@@ -484,9 +473,7 @@ ul {
 }
 
 .footer_navigation_list {
-    font-family: Roboto, sans-serif;
-    font-weight: 400;
-    font-size: 20px;
+    font: 400 20px 'Roboto', sans-serif;
     line-height: 50px;
 
 }
