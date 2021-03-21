@@ -14,8 +14,24 @@
     src: url("fonts/Roboto_500_latin.woff2") format('woff2');
 }
 
-@media only screen and (max-width: 1232px) {
+:root {
+    --primary: #3077C6;
+    --primary-dark: #10367c;
+    --secondary: #F5BD41;
+    --dark-mode-1: #121212;
+    --dark-mode-2: #1D1E1F;
+    --dark-mode-3: #4D4D4D;
+    --stroke-color-main: #F3F3F4;
+    --text-color-main: #383838;
+    --general-white: #FFFFFF;
+    --secondary-text: #BFBFBF;
+    --bg-color-main: #EAF0F9;
+    --one-col-width: calc(100% * 1 / 14);
+    --one-col-md-width: calc(100% * 1 / 6);
 
+}
+
+@media only screen and (max-width: 1440px) {
 
     .col-1 {
         width: var(--one-col-width);
@@ -64,31 +80,12 @@
     .col-12 {
         width: calc(var(--one-col-width) * 12);
     }
-
     .col-13 {
         width: calc(var(--one-col-width) * 13);
     }
-
     .col-14 {
-        width: 100%;
+        width: calc(var(--one-col-width) * 14);
     }
-
-}
-
-:root {
-    --primary: #3077C6;
-    --primary-dark: #10367c;
-    --secondary: #F5BD41;
-    --dark-mode-1: #121212;
-    --dark-mode-2: #1D1E1F;
-    --dark-mode-3: #4D4D4D;
-    --stroke-color-main: #F3F3F4;
-    --text-color-main: #383838;
-    --general-white: #FFFFFF;
-    --secondary-text: #BFBFBF;
-    --bg-color-main: #EAF0F9;
-    --one-col-width: calc(100% *1 / 14);
-    --one-col-md-width: calc(100% *1 / 6);
 
 }
 
@@ -97,57 +94,54 @@ body {
 }
 
 .top_section {
+
     box-sizing: border-box;
-    width: 100%;
-    max-width: 1440px;
-    height: 100%;
+    max-height: 900px;
     min-height: 100vh;
     background-image: url("images/background mountains.png");
-    background-blend-mode: darken;
     background-position: top center;
     background-repeat: no-repeat;
+    background-size: cover;
+
+}
+
+.top_section_conteiner {
+    padding-left: var(--one-col-width);
+    padding-right: var(--one-col-width);
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .top_section_header {
-    box-sizing: border-box;
-    width: 85.42%; /*1230 / 1440*/
-    /*height: 90px;*/
     padding-top: 50px;
-    margin: auto;
     display: flex;
     justify-content: space-between;
-    align-items: flex-end;
-    align-content: baseline;
 }
 
-.top_section_header_logo {
-    align-items: flex-start;
-
-}
 .logo_trip_house {
     width: 205px;
     height: 40px;
 }
 
-
 .top_section_header_stays_attractions_night_accountCircle {
     display: flex;
-    width: 350px;/*350px*/
-    /*height: 45px;*/
+    width: 350px;
     justify-content: space-between;
 }
 
 .top_section_header_night_accountCircle {
     display: flex;
-    width: 95px; /* /1440*/
+    width: 95px;
     height: 45px;
     justify-content: space-between;
     align-items: center;
 }
+
 .night {
     width: 30px;
     height: 30px;
 }
+
 .account_circle {
     width: 40px;
     height: 40px;
@@ -165,76 +159,58 @@ body {
     align-items: center;
     font: 400 24px Roboto;
     color: var(--general-white);
-    align-content: space-between;
+
 }
 
 .stays, .attractions {
     margin: 0;
 }
 
-.stays::after {
+.stays:hover::after,.attractions:hover::after {
     content: "";
     height: 4px;
     width: 50px;
     background-color: var(--secondary);
     display: block;
     position: relative;
-    top: 10px;
+    top: 15px;
     left: calc((100% - (50px)) / 2);
     margin-top: -4px;
 }
 
 .attractions:hover::after {
-    content: "";
-    height: 4px;
+
     width: 110px;
-    background-color: var(--secondary);
-    display: block;
-    position: relative;
-    top: 10px;
+    top: 15px;
     left: calc((100% - (110px)) / 2);
-    margin-top: -4px;
+
 }
 
 .discoverStays {
-    font-family: Roboto, sans-serif;
-    font-weight: 500;
-    font-size: 50px;
-    color: var(--general-white);
+    font: 500 50px Roboto;
     line-height: 58px;
-    display: flex;
-    padding-left: 104px;
+    color: var(--general-white);
     padding-top: 202px;
-    flex-wrap: wrap;
     margin: 0;
-}
-
-.top_section_main {
-    box-sizing: border-box;
-    width: 100%;
-    /*height: 810px;*/
 }
 
 .top_section_main_general_label {
     display: flex;
     box-sizing: border-box;
     min-height: 145px;
-    width: 52.777%; /*760px/1440px *на самом деле 640*/
+    width: 640px;
     justify-content: space-between;
     align-items: flex-end;
-    padding-left: 130px;
+    padding-left: 25px;
     padding-bottom: 25px;
     font: 400 18px Roboto;
-    line-height: 21px;
     color: var(--general-white);
 }
-
 
 .top_section_main_form {
     display: flex;
     box-sizing: border-box;
-    height: 65px; /*thinking about it*/
-    max-width: 1230px; /*1230px/1440*/
+    height: 65px;
     justify-content: space-between;
     margin: auto;
     align-items: baseline;
@@ -262,7 +238,7 @@ body {
     outline: none;
 }
 
-#destination::placeholder, #information_about_order::placeholder { /* working*/
+#destination::placeholder, #information_about_order::placeholder {
     font: 400 18px Roboto;
     line-height: 21px;
     color: var(--text-color-main);
@@ -323,15 +299,16 @@ body {
     box-sizing: border-box;
     max-width: 270px; /*270px/1440*/
     padding-top: 120px;
-    /* height: 160px;*/
     justify-content: space-between;
     align-items: flex-end;
     margin: auto;
 }
+
 .google_play_badge {
     width: 135px;
     height: 40px;
 }
+
 .app_store_badge {
     width: 120px;
     height: 40px;
@@ -339,8 +316,6 @@ body {
 
 .section_what_do_we_offer {
     box-sizing: border-box;
-    width: 100%;
-    max-width: 1440px;
     min-height: 570px;
     background-color: var(--general-white);
     margin: 0;
@@ -350,16 +325,13 @@ body {
 .what_do_we_offer_header_heading120 {
     box-sizing: border-box;
     width: 100%;
-    /*height: 166px;*/
     display: flex;
     justify-content: center;
 
 }
 
 .what_do_we_offer_header_h2 {
-    font-family: 'Roboto', sans-serif;
-    font-weight: 500;
-    font-size: 40px;
+    font: 500 40px Roboto;
     color: var(--text-color-main);
     margin: 0;
     padding-top: 120px;
@@ -377,20 +349,16 @@ body {
     margin-top: -4px;
 }
 
-
 .what_do_we_offer_main {
     display: flex;
     justify-content: space-evenly;
     align-items: baseline;
     box-sizing: border-box;
-    width: 100%;
     min-height: 400px;
 }
 
 .what_do_we_offer_main_icons {
-    font-family: Roboto, sans-serif;
-    font-weight: 400;
-    font-size: 24px;
+    font: 400 24px Roboto;
     text-align: center;
     padding-top: 115px;
 
@@ -400,14 +368,17 @@ body {
     width: 76px;
     height: 92px;
 }
+
 .communicate_directly {
     width: 84px;
     height: 84px;
 }
+
 .book_online {
     width: 100px;
     height: 68px;
 }
+
 .like_real_guest_reviews {
     width: 92px;
     height: 84px;
@@ -418,10 +389,9 @@ body {
     margin: 0 auto;
 }
 
+
 footer {
     box-sizing: border-box;
-    width: 100%;
-    max-width: 1440px;
     height: 630px;
     background-color: var(--primary-dark);
 
@@ -472,35 +442,40 @@ ul {
     padding-top: 65px;
     padding-left: 103px;
 }
+@media only screen and (max-width : 768px)
+{
+    :root {
+        --col-width: calc(100% * 1 / 6);
+    }
 
-@media only screen and (max-width: 768px) {
     .col-md-1 {
-        width: var(--one-col-md-width);
+        width: var(--col-width);
     }
 
     .col-md-2 {
-        width: calc(var(--one-col-md-width) * 2);
+        width: calc(var(--col-width) * 2);
     }
 
     .col-md-3 {
-        width: calc(var(--one-col-md-width) * 3); /*50%*/
+        width: calc(var(--col-width) * 3); /* 50% */
     }
 
     .col-md-4 {
-        width: calc(var(--one-col-md-width) * 4);
+        width: calc(var(--col-width) * 4);
     }
 
     .col-md-5 {
-        width: calc(var(--one-col-md-width) * 5);
+        width: calc(var(--col-width) * 5);
     }
 
     .col-md-6 {
-        width: 100%;
+        width: calc(var(--col-width) * 6);
     }
 
-    .top_section {
+    .top_section_conteiner {
         background-position: right;
-
+        padding-left: calc(var(--col-width) / 3);
+        padding-right: calc(var(--col-width) / 3);
     }
 
     .logo_trip_house {
@@ -528,28 +503,13 @@ ul {
         display: flex;
     }
 
-    .what_DoWe_Offer_header_hr {
-        display: none;
-    }
-
     .top_section_header {
         padding-top: 15px;
-        justify-content: space-between;
         align-items: center;
     }
 
     .top_section_header_stays_attractions_night_accountCircle {
-        display: flex;
-        max-width: 205px;
         justify-content: flex-end;
-    }
-
-    .top_section_header_night_accountCircle {
-        display: flex;
-        min-width: 95px;
-        height: 45px;
-        justify-content: space-between;
-        align-items: center;
     }
 
     .top_section_header_stays_attractions, .stays, .attractions {
@@ -558,9 +518,7 @@ ul {
 
     .discoverStays {
         font-size: 30px;
-        padding: 50px 0 0 0;
-        justify-content: center;
-        flex-wrap: wrap;
+        padding-top: 50px;
         line-height: 35px
     }
 
@@ -568,17 +526,8 @@ ul {
         display: none;
     }
 
-    .top_section_main_form_background {
-        /*display: flex;
-        flex-wrap: wrap;
-        box-sizing: border-box;*/
-        height: 43.5vh; /*thinking about it*/
-        width: 90vw; /*1230px/1440*/
-        /*justify-content: center;
-        !*margin: auto;*!
-        align-items: baseline;*/
-        border-radius: 0;
-        margin: 30px auto;
+    .top_section_all_form {
+        padding-top: 30px;
     }
 
     .top_section_main_form {
@@ -586,40 +535,52 @@ ul {
         flex-wrap: wrap;
         float: left;
         box-sizing: border-box;
-        height: 40vh; /*thinking about it*/
-        width: 85vw;
-        /* height: 65px;*/ /*thinking about it*/
-        /*width: 85.4166%; *//*1230px/1440*/
-        justify-content: space-between;
-        align-items: center;
+        flex-direction: column;
+        align-content: space-around;
+        height: 40vh;
         background-color: var(--secondary);
+        border-radius: 0;
     }
 
-    #input-button {
-        justify-content: flex-end;
-        align-items: baseline;
-        color: var(--general-white);
-        height: 20%;
-        width: 85vw; /*190px*/
+    #top_section_main_input_for_check-in_check-out {
+        height: 48px;
+        width: 100%;
+        background-color: var(--secondary);
+        border: none;
+    }
+
+    #check-in, #check-out {
+        height: 48px;
+        width: 50%; /*152px*/
         border-radius: 8px;
-
+        margin: 0 8px 8px 8px;
     }
 
-    #destination, #top_section_main_input_for_check-in_check-out, #information_about_order {
-        height: 20%;
-    }
 
+    #destination, #information_about_order, #input-button {
+        height: 48px;
+        width: 95%; /*312px / 328*/
+        border-radius: 8px;
+        margin: 8px 8px 8px;
+        outline: none;
+    }
 
     .top_section_main_AppStore_GooglePlay {
-        max-width: 270px;
-        padding-top: 35px;
+        padding-top: 30px;
 
+    }
+
+    /*Offer*/
+    .what_do_we_offer_conteiner {
+        padding: 25px calc(var(--one-col-width) / 2) 40px;
     }
 
     .what_do_we_offer_header_h2 {
+        display: flex;
         font-size: 28px;
-        padding-top: 25px;
-        margin: auto;
+        padding: 0;
+        justify-content: center;
+
     }
 
     .what_do_we_offer_header_h2::after {
@@ -628,17 +589,15 @@ ul {
 
     .what_do_we_offer_main {
         display: flex;
-        box-sizing: border-box;
-        width: 100%;
         flex-wrap: wrap;
         flex-direction: column;
         justify-content: center;
         align-items: center;
     }
 
-    .what_do_we_offer_main:last-child {
-        padding-bottom: 40px;
-
+    .what_do_we_offer_header_heading120 {
+        padding: 0;
+        justify-content: center;
     }
 
     .what_do_we_offer_main_icons {
@@ -672,14 +631,22 @@ ul {
         width: 64px;
         height: 58px;
     }
+
+    /*footer*/
+    .footer_conteiner {
+        padding: 40px calc(var(--one-col-width) / 2);
+    }
+
     footer {
         max-height: 205px;
     }
+
     .logo_trip_house_for_footer {
         display: flex;
         justify-content: center;
-        padding-top: 40px;
+
     }
+
     .logo_for_footer {
         width: 98px;
         height: 19px;
@@ -700,12 +667,13 @@ ul {
         justify-content: space-between;
         align-items: center;
         padding: 40px;
+        margin: auto;
     }
 
     .footer_copyright {
         font-size: 12px;
         line-height: 14px;
-        padding: 0 0 40px 0;
+        padding: 0;
         display: flex;
         justify-content: center;
 
