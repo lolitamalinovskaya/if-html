@@ -14,42 +14,119 @@
     src: url("fonts/Roboto_500_latin.woff2") format('woff2');
 }
 
+:root {
+    --primary: #3077C6;
+    --primary-dark: #10367c;
+    --secondary: #F5BD41;
+    --dark-mode-1: #121212;
+    --dark-mode-2: #1D1E1F;
+    --dark-mode-3: #4D4D4D;
+    --stroke-color-main: #F3F3F4;
+    --text-color-main: #383838;
+    --general-white: #FFFFFF;
+    --secondary-text: #BFBFBF;
+    --bg-color-main: #EAF0F9;
+    --one-col-width: calc(100% * 1 / 14);
+    --one-col-md-width: calc(100% * 1 / 6);
+
+}
+
+@media only screen and (max-width: 1440px) {
+
+    .col-1 {
+        width: var(--one-col-width);
+    }
+
+    .col-2 {
+        width: calc(var(--one-col-width) * 2);
+    }
+
+    .col-3 {
+        width: calc(var(--one-col-width) * 3);
+    }
+
+    .col-4 {
+        width: calc(var(--one-col-width) * 4);
+    }
+
+    .col-5 {
+        width: calc(var(--one-col-width) * 5);
+    }
+
+    .col-6 {
+        width: calc(var(--one-col-width) * 6);
+    }
+
+    .col-7 {
+        width: calc(var(--one-col-width) * 7); /*50%*/
+    }
+
+    .col-8 {
+        width: calc(var(--one-col-width) * 8);
+    }
+
+    .col-9 {
+        width: calc(var(--one-col-width) * 9);
+    }
+
+    .col-10 {
+        width: calc(var(--one-col-width) * 10);
+    }
+
+    .col-11 {
+        width: calc(var(--one-col-width) * 11);
+    }
+
+    .col-12 {
+        width: calc(var(--one-col-width) * 12);
+    }
+    .col-13 {
+        width: calc(var(--one-col-width) * 13);
+    }
+    .col-14 {
+        width: calc(var(--one-col-width) * 14);
+    }
+
+}
+
 body {
     margin: 0;
 }
 
 .top_section {
+
     box-sizing: border-box;
-    width: 1440px;
-    height: 900px;
+    max-height: 900px;
     min-height: 100vh;
     background-image: url("images/background mountains.png");
     background-position: top center;
+    background-repeat: no-repeat;
+    background-size: cover;
 
+}
+
+.top_section_conteiner {
+    padding-left: var(--one-col-width);
+    padding-right: var(--one-col-width);
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .top_section_header {
-    box-sizing: border-box;
-    width: 1230px;
-    height: 90px;
-    margin: auto;
+    padding-top: 50px;
     display: flex;
-    flex-direction: row;
     justify-content: space-between;
-    align-items: flex-end;
-    align-content: baseline;
 }
 
-.top_section_header_logo {
-    align-items: flex-start;
+.logo_trip_house {
+    width: 205px;
+    height: 40px;
 }
 
 .top_section_header_stays_attractions_night_accountCircle {
     display: flex;
     width: 350px;
-    height: 45px;
     justify-content: space-between;
-
 }
 
 .top_section_header_night_accountCircle {
@@ -60,89 +137,87 @@ body {
     align-items: center;
 }
 
+.night {
+    width: 30px;
+    height: 30px;
+}
+
+.account_circle {
+    width: 40px;
+    height: 40px;
+}
+
+.top_section_menu {
+    display: none;
+}
+
 .top_section_header_stays_attractions {
     display: flex;
-    flex-direction: row;
     width: 200px;
     height: 45px;
     justify-content: space-between;
     align-items: center;
     font: 400 24px Roboto;
-    color: #FFFFFF;
-    align-content: space-between;
+    color: var(--general-white);
+
 }
 
 .stays, .attractions {
     margin: 0;
 }
 
-.stays::after {
+.stays:hover::after,.attractions:hover::after {
     content: "";
     height: 4px;
     width: 50px;
-    background-color: #F5BD41;
+    background-color: var(--secondary);
     display: block;
     position: relative;
-    top: 10px;
+    top: 15px;
     left: calc((100% - (50px)) / 2);
     margin-top: -4px;
 }
 
-.attractions:hover::after, .stays:hover::after{
-    content: "";
-    height: 4px;
+
+.attractions:hover::after {
+
     width: 110px;
-    background-color: #F5BD41;
-    display: block;
-    position: relative;
-    top: 10px;
+    top: 15px;
     left: calc((100% - (110px)) / 2);
-    margin-top: -4px;
+
 }
 
 .discoverStays {
-    font-family: Roboto, sans-serif;
-    font-weight: 500;
-    font-size: 50px;
-    color: #FFFFFF;
+    font: 500 50px Roboto;
     line-height: 58px;
-    display: flex;
-    padding-left: 104px;
+    color: var(--general-white);
     padding-top: 202px;
     margin: 0;
-}
-
-.top_section_main {
-    box-sizing: border-box;
-    width: 1440px;
-    height: 810px;
 }
 
 .top_section_main_general_label {
     display: flex;
     box-sizing: border-box;
-    height: 145px;
-    width: 760px; /*на самом деле 640*/
+    min-height: 145px;
+    width: 640px;
     justify-content: space-between;
     align-items: flex-end;
-    flex-direction: row;
-    padding-left: 130px;
+    padding-left: 25px;
     padding-bottom: 25px;
     font: 400 18px Roboto;
+    color: var(--general-white);
     line-height: 21px;
-    color: #FFFFFF;
+
 }
 
 .top_section_main_form {
     display: flex;
     box-sizing: border-box;
     height: 65px;
-    width: 1230px;
-    flex-direction: row;
     justify-content: space-between;
     margin: auto;
     align-items: baseline;
-    background-color: #FFFFFF;
+    background-color: var(--general-white);
     border-radius: 8px;
 
 }
@@ -152,7 +227,7 @@ body {
     box-sizing: border-box;
     align-self: center;
     height: 65px;
-    width: 467px;
+    width: 467px; /*467px / 1440*/
     border: 3px solid transparent;
     border-radius: 8px;
     font: 400 18px Roboto;
@@ -162,14 +237,14 @@ body {
 
 #destination:focus, #information_about_order:focus, #top_section_main_input_for_check-in_check-out:focus {
     border-radius: 8px;
-    border: 3px solid #F5BD41;
+    border: 3px solid var(--secondary);
     outline: none;
 }
 
-#destination::placeholder, #information_about_order::placeholder { /* working*/
+#destination::placeholder, #information_about_order::placeholder {
     font: 400 18px Roboto;
     line-height: 21px;
-    color: #383838;
+    color: var(--text-color-main);
     padding-left: 24px;
 }
 
@@ -184,15 +259,15 @@ body {
     display: flex;
     box-sizing: border-box;
     height: 65px;
-    width: 260px;
+    width: 260px; /*260px / 1440*/
     align-self: center;
     justify-content: center;
-    border: 3px solid #F5BD41;
+    border: 3px solid var(--secondary);
     border-radius: 8px;
     font: 400 18px Roboto;
     text-align: center;
     padding: 0;
-    background-color: #FFFFFF;
+    background-color: var(--general-white);
 }
 
 #information_about_order {
@@ -200,7 +275,7 @@ body {
     box-sizing: border-box;
     align-self: center;
     height: 65px;
-    width: 314px;
+    width: 314px; /*314px*/
     justify-content: flex-end;
     align-items: center;
     border: 3px solid transparent;
@@ -213,117 +288,132 @@ body {
     justify-content: flex-end;
     align-items: baseline;
     font: 500 24px Roboto;
-    color: #FFFFFF;
-    height: 100%;
-    width: 190px;
-    background: #3077C6;
+    color: var(--general-white);
+    height: 65px;
+    width: 190px; /*190px*/
+    background: var(--primary);
     border-radius: 8px;
     border: none;
+    outline: none;
 }
 
 .top_section_main_AppStore_GooglePlay {
     display: flex;
     box-sizing: border-box;
-    max-width: 270px;
-    height: 160px;
+    max-width: 270px; /*270px/1440*/
+    padding-top: 120px;
     justify-content: space-between;
     align-items: flex-end;
     margin: auto;
 }
 
-section {
+.google_play_badge {
+    width: 135px;
+    height: 40px;
+}
+
+.app_store_badge {
+    width: 120px;
+    height: 40px;
+}
+
+.section_what_do_we_offer {
     box-sizing: border-box;
-    width: 1440px;
-    height: 570px;
-    background-color: #FFFFFF;
+    min-height: 570px;
+    background-color: var(--general-white);
     margin: 0;
 
 }
 
-.heading120 {
+.what_do_we_offer_header_heading120 {
     box-sizing: border-box;
-    width: 1440px;
-    height: 166px;
+    width: 100%;
     display: flex;
     justify-content: center;
-    padding-top: 120px;
 
 }
 
-
-h2 {
-    font-family: 'Roboto', sans-serif;
-    font-weight: 500;
-    font-size: 40px;
-    color: #383838;
+.what_do_we_offer_header_h2 {
+    font: 500 40px Roboto;
+    color: var(--text-color-main);
     margin: 0;
+    padding-top: 120px;
 }
 
-.what_DoWe_Offer_hr {
-    width: 100px;
+.what_do_we_offer_header_h2::after {
+    content: "";
     height: 4px;
-    margin: 20px auto 0;
-    border: none;
-    background-color: #f5bd41;
+    width: 100px;
+    background-color: var(--secondary);
+    display: block;
+    position: relative;
+    top: 25px;
+    left: calc((100% - (100px)) / 2);
+    margin-top: -4px;
 }
 
-.whatDoWeOffer {
+.what_do_we_offer_main {
     display: flex;
     justify-content: space-evenly;
     align-items: baseline;
     box-sizing: border-box;
-    width: 1440px;
-    height: 380px;
-
+    min-height: 400px;
 }
 
-.icons {
-    font-family: Roboto, sans-serif;
-    font-weight: 400;
-    font-size: 24px;
+.what_do_we_offer_main_icons {
+    font: 400 24px Roboto;
     text-align: center;
-    padding-top: 85px;
+    padding-top: 115px;
+
 }
 
-.iconsName {
+.headphones_support {
+    width: 76px;
+    height: 92px;
+}
+
+.communicate_directly {
+    width: 84px;
+    height: 84px;
+}
+
+.book_online {
+    width: 100px;
+    height: 68px;
+}
+
+.like_real_guest_reviews {
+    width: 92px;
+    height: 84px;
+}
+
+.what_do_we_offer_main_iconsName {
     padding-top: 55px;
     margin: 0 auto;
 }
 
+
 footer {
     box-sizing: border-box;
-    width: 1440px;
     height: 630px;
-    background-color: #10367C;
+    background-color: var(--primary-dark);
 
 }
 
-nav {
-    max-width: 1064px;
+.logo_trip_house_for_footer {
+    display: none;
+}
+
+.footer_navigation {
+    max-width: 73.88%; /*1064px / 14440*/
     display: flex;
     justify-content: space-between;
     padding-left: 104px;
-    padding-top: 120px;
+    padding-top: 115px;
 
 }
 
-ul {
-    list-style-type: none;
-    color: #FFFFFF;
-    margin: 0;
-    padding-inline-start: 0;
-
-}
-
-li {
-    font-family: Roboto, sans-serif;
-    font-weight: 400;
-    font-size: 20px;
-    line-height: 50px;
-
-}
-
-.heading_navigation {
+.footer_navigation_heading {
     font-family: Roboto, sans-serif;
     font-weight: 500;
     font-size: 20px;
@@ -331,12 +421,264 @@ li {
 
 }
 
-.copyright {
+ul {
+    list-style-type: none;
+    color: var(--general-white);
+    margin: 0;
+    padding-inline-start: 0;
+
+}
+
+.footer_navigation_list {
+    font-family: Roboto, sans-serif;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 50px;
+
+}
+
+.footer_copyright {
     font-family: Roboto, sans-serif;
     font-size: 14px;
     line-height: 16px;
-    color: #FFFFFF;
+    color: var(--general-white);
     padding-top: 65px;
     padding-left: 103px;
+}
+@media only screen and (max-width : 768px)
+{
+    :root {
+        --col-width: calc(100% * 1 / 6);
+    }
 
+    .col-md-1 {
+        width: var(--col-width);
+    }
+
+    .col-md-2 {
+        width: calc(var(--col-width) * 2);
+    }
+
+    .col-md-3 {
+        width: calc(var(--col-width) * 3); /* 50% */
+    }
+
+    .col-md-4 {
+        width: calc(var(--col-width) * 4);
+    }
+
+    .col-md-5 {
+        width: calc(var(--col-width) * 5);
+    }
+
+    .col-md-6 {
+        width: calc(var(--col-width) * 6);
+    }
+
+    .top_section_conteiner {
+        background-position: right;
+        padding-left: calc(var(--col-width) / 3);
+        padding-right: calc(var(--col-width) / 3);
+    }
+
+    .logo_trip_house {
+        width: 125px;
+        height: 25px;
+    }
+
+    .stays, .attractions {
+        display: none;
+    }
+
+    .night {
+        width: 16px;
+        height: 16px;
+    }
+
+    .account_circle {
+        width: 24px;
+        height: 24px;
+    }
+
+    .top_section_menu {
+        width: 24px;
+        height: 16px;
+        display: flex;
+    }
+
+    .top_section_header {
+        padding-top: 15px;
+        align-items: center;
+    }
+
+    .top_section_header_stays_attractions_night_accountCircle {
+        justify-content: flex-end;
+    }
+
+    .top_section_header_stays_attractions, .stays, .attractions {
+        display: none;
+    }
+
+    .discoverStays {
+        font-size: 30px;
+        padding-top: 50px;
+        line-height: 35px
+    }
+
+    .top_section_main_general_label {
+        display: none;
+    }
+
+    .top_section_all_form {
+        padding-top: 30px;
+    }
+
+    .top_section_main_form {
+        display: flex;
+        flex-wrap: wrap;
+        float: left;
+        box-sizing: border-box;
+        flex-direction: column;
+        align-content: space-around;
+        height: 40vh;
+        background-color: var(--secondary);
+        border-radius: 0;
+    }
+
+    #top_section_main_input_for_check-in_check-out {
+        height: 48px;
+        width: 100%;
+        background-color: var(--secondary);
+        border: none;
+    }
+
+    #check-in, #check-out {
+        height: 48px;
+        width: 50%; /*152px*/
+        border-radius: 8px;
+        margin: 0 8px 8px 8px;
+    }
+
+
+    #destination, #information_about_order, #input-button {
+        height: 48px;
+        width: 95%; /*312px / 328*/
+        border-radius: 8px;
+        margin: 8px 8px 8px;
+        outline: none;
+    }
+
+    .top_section_main_AppStore_GooglePlay {
+        padding-top: 30px;
+
+    }
+
+    /*Offer*/
+    .what_do_we_offer_conteiner {
+        padding: 25px calc(var(--one-col-width) / 2) 40px;
+    }
+
+    .what_do_we_offer_header_h2 {
+        display: flex;
+        font-size: 28px;
+        padding: 0;
+        justify-content: center;
+
+    }
+
+    .what_do_we_offer_header_h2::after {
+        display: none;
+    }
+
+    .what_do_we_offer_main {
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .what_do_we_offer_header_heading120 {
+        padding: 0;
+        justify-content: center;
+    }
+
+    .what_do_we_offer_main_icons {
+        font-size: 15px;
+        padding-top: 35px;
+        flex-wrap: wrap;
+
+    }
+
+    .what_do_we_offer_main_iconsName {
+        padding-top: 15px;
+        margin: 0 auto;
+    }
+
+    .headphones_support {
+        width: 53px;
+        height: 64px;
+    }
+
+    .communicate_directly {
+        width: 58px;
+        height: 58px;
+    }
+
+    .book_online {
+        width: 70px;
+        height: 47px;
+    }
+
+    .like_real_guest_reviews {
+        width: 64px;
+        height: 58px;
+    }
+
+    /*footer*/
+    .footer_conteiner {
+        padding: 40px calc(var(--one-col-width) / 2);
+    }
+
+    footer {
+        max-height: 205px;
+    }
+
+    .logo_trip_house_for_footer {
+        display: flex;
+        justify-content: center;
+
+    }
+
+    .logo_for_footer {
+        width: 98px;
+        height: 19px;
+    }
+
+    .footer_navigation_list {
+        display: none;
+    }
+
+    .footer_navigation_heading {
+        font-size: 15px;
+        line-height: 18px;
+        text-decoration: underline;
+    }
+
+    .footer_navigation {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 40px;
+        margin: auto;
+    }
+
+    .footer_copyright {
+        font-size: 12px;
+        line-height: 14px;
+        padding: 0;
+        display: flex;
+        justify-content: center;
+
+    }
 }
