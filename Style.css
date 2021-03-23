@@ -26,12 +26,12 @@
     --general-white: #FFFFFF;
     --secondary-text: #BFBFBF;
     --bg-color-main: #EAF0F9;
-    --one-col-width: calc(100% * 1 / 12);
+    --one-col-width: calc(100% * 1 / 14);
     --one-col-md-width: calc(100% * 1 / 6);
 
 }
 
-@media only screen and (max-width: 1232px) {
+@media only screen and (max-width: 1440px) {
 
     .col-1 {
         width: var(--one-col-width);
@@ -81,6 +81,13 @@
         width: calc(var(--one-col-width) * 12);
     }
 
+    .col-13 {
+        width: calc(var(--one-col-width) * 13);
+    }
+
+    .col-14 {
+        width: calc(var(--one-col-width) * 14);
+    }
 
 }
 
@@ -91,14 +98,12 @@ body {
 .top_section {
 
     box-sizing: border-box;
-    width: 100%;
-    max-width: 1440px;
     max-height: 900px;
     min-height: 100vh;
     background-image: url("images/background mountains.png");
-    background-blend-mode: darken;
     background-position: top center;
     background-repeat: no-repeat;
+    background-size: cover;
 
 }
 
@@ -163,28 +168,25 @@ body {
     margin: 0;
 }
 
-.stays:hover::after {
+.stays:hover::after, .attractions:hover::after {
     content: "";
     height: 4px;
     width: 50px;
     background-color: var(--secondary);
     display: block;
     position: relative;
-    top: 10px;
+    top: 15px;
     left: calc((100% - (50px)) / 2);
     margin-top: -4px;
 }
 
+
 .attractions:hover::after {
-    content: "";
-    height: 4px;
+
     width: 110px;
-    background-color: var(--secondary);
-    display: block;
-    position: relative;
-    top: 10px;
+    top: 15px;
     left: calc((100% - (110px)) / 2);
-    margin-top: -4px;
+
 }
 
 .discoverStays {
@@ -206,6 +208,8 @@ body {
     padding-bottom: 25px;
     font: 400 18px Roboto;
     color: var(--general-white);
+    line-height: 21px;
+
 }
 
 .top_section_main_form {
@@ -231,7 +235,6 @@ body {
     font: 400 18px Roboto;
     padding: 0;
 }
-
 
 #destination:focus, #information_about_order:focus, #top_section_main_input_for_check-in_check-out:focus {
     border-radius: 8px;
@@ -317,8 +320,6 @@ body {
 
 .section_what_do_we_offer {
     box-sizing: border-box;
-    width: 100%;
-    max-width: 1440px;
     min-height: 570px;
     background-color: var(--general-white);
     margin: 0;
@@ -334,9 +335,7 @@ body {
 }
 
 .what_do_we_offer_header_h2 {
-    font-family: 'Roboto', sans-serif;
-    font-weight: 500;
-    font-size: 40px;
+    font: 500 40px Roboto;
     color: var(--text-color-main);
     margin: 0;
     padding-top: 120px;
@@ -354,20 +353,16 @@ body {
     margin-top: -4px;
 }
 
-
 .what_do_we_offer_main {
     display: flex;
     justify-content: space-evenly;
     align-items: baseline;
     box-sizing: border-box;
-    width: 100%;
     min-height: 400px;
 }
 
 .what_do_we_offer_main_icons {
-    font-family: Roboto, sans-serif;
-    font-weight: 400;
-    font-size: 24px;
+    font: 400 24px Roboto;
     text-align: center;
     padding-top: 115px;
 
@@ -398,10 +393,9 @@ body {
     margin: 0 auto;
 }
 
+
 footer {
     box-sizing: border-box;
-    width: 100%;
-    max-width: 1440px;
     height: 630px;
     background-color: var(--primary-dark);
 
@@ -453,9 +447,9 @@ ul {
     padding-left: 103px;
 }
 
-@media only screen and (max-width: 480px) {
+@media only screen and (max-width: 768px) {
     :root {
-        --col-width: calc(100% * 1 / 12);
+        --col-width: calc(100% * 1 / 6);
     }
 
     .col-md-1 {
@@ -463,29 +457,29 @@ ul {
     }
 
     .col-md-2 {
-        width: calc(var(--col-width) * 4);
+        width: calc(var(--col-width) * 2);
     }
 
     .col-md-3 {
-        width: calc(var(--col-width) * 6); /* 50% */
+        width: calc(var(--col-width) * 3); /* 50% */
     }
 
     .col-md-4 {
-        width: calc(var(--col-width) * 8);
+        width: calc(var(--col-width) * 4);
     }
 
     .col-md-5 {
-        width: calc(var(--col-width) * 10);
+        width: calc(var(--col-width) * 5);
     }
 
     .col-md-6 {
-        width: calc(var(--col-width) * 12);
+        width: calc(var(--col-width) * 6);
     }
 
     .top_section_conteiner {
         background-position: right;
-        padding-left: calc(var(--one-col-width) / 2);
-        padding-right: calc(var(--one-col-width) / 2);
+        padding-left: calc(var(--col-width) / 3);
+        padding-right: calc(var(--col-width) / 3);
     }
 
     .logo_trip_house {
