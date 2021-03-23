@@ -178,6 +178,7 @@ body {
     margin-top: -4px;
 }
 
+
 .attractions:hover::after {
 
     width: 110px;
@@ -205,6 +206,8 @@ body {
     padding-bottom: 25px;
     font: 400 18px Roboto;
     color: var(--general-white);
+    line-height: 21px;
+
 }
 
 .top_section_main_form {
