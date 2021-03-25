@@ -80,9 +80,11 @@
     .col-12 {
         width: calc(var(--one-col-width) * 12);
     }
+
     .col-13 {
         width: calc(var(--one-col-width) * 13);
     }
+
     .col-14 {
         width: calc(var(--one-col-width) * 14);
     }
@@ -92,6 +94,7 @@
 body {
     margin: 0;
 }
+
 
 .top_section {
 
@@ -166,7 +169,7 @@ body {
     margin: 0;
 }
 
-.stays:hover::after,.attractions:hover::after {
+.stays:hover::after, .attractions:hover::after {
     content: "";
     height: 4px;
     width: 50px;
@@ -177,7 +180,6 @@ body {
     left: calc((100% - (50px)) / 2);
     margin-top: -4px;
 }
-
 
 .attractions:hover::after {
 
@@ -191,7 +193,7 @@ body {
     font: 500 50px Roboto;
     line-height: 58px;
     color: var(--general-white);
-    padding-top: 202px;
+    padding-top: 200px;
     margin: 0;
 }
 
@@ -206,8 +208,6 @@ body {
     padding-bottom: 25px;
     font: 400 18px Roboto;
     color: var(--general-white);
-    line-height: 21px;
-
 }
 
 .top_section_main_form {
@@ -325,15 +325,14 @@ body {
 
 }
 
-.what_do_we_offer_header_heading120 {
+.what_do_we_offer_header_heading120, .homes_guests_loves_header_heading120 {
     box-sizing: border-box;
-    width: 100%;
     display: flex;
     justify-content: center;
 
 }
 
-.what_do_we_offer_header_h2 {
+.what_do_we_offer_header_h2, .homes_guests_loves_header_h2 {
     font: 500 40px Roboto;
     color: var(--text-color-main);
     margin: 0;
@@ -392,6 +391,64 @@ body {
     margin: 0 auto;
 }
 
+/*homes_guests_loves*/
+.homes_guests_loves {
+    box-sizing: border-box;
+    height: 830px;
+    background-color: var(--bg-color-main);
+    margin: 0;
+}
+
+.homes_guests_loves_main {
+    display: flex;
+    justify-content: space-between;
+    box-sizing: border-box;
+    max-width: calc(100% - var(--one-col-width) * 2);
+    align-items: baseline;
+    padding-top: 105px;
+    margin: auto;
+    position: relative;
+}
+
+figure {
+    margin: 0;
+}
+
+.hotel_leopold, .appartment_sunshine, .villa_kunerad {
+    padding-right: 15px;
+}
+
+figure img {
+    width: 100%;
+    max-width: 295px;
+    height: 100%;
+    max-height: 295px;
+    object-position: top center;
+    object-fit: cover;
+}
+
+.homes_guests_loves_main_name_hotel, .homes_guests_loves_main_name_place {
+    font: 400 24px Roboto;
+    line-height: 28px;
+    color: var(--primary);
+    padding-top: 24px;
+}
+
+.homes_guests_loves_main_name_place {
+    color: var(--secondary-text);
+}
+
+.arrows_right {
+    width: 40px;
+    height: 40px;
+
+}
+
+.arrow_position {
+    position: absolute;
+    right: -20px;
+    top: 43%;
+}
 
 footer {
     box-sizing: border-box;
@@ -414,9 +471,7 @@ footer {
 }
 
 .footer_navigation_heading {
-    font-family: Roboto, sans-serif;
-    font-weight: 500;
-    font-size: 20px;
+    font: 500 20px 'Roboto';
     line-height: 55px;
 
 }
@@ -430,9 +485,7 @@ ul {
 }
 
 .footer_navigation_list {
-    font-family: Roboto, sans-serif;
-    font-weight: 400;
-    font-size: 20px;
+    font: 400 20px 'Roboto', sans-serif;
     line-height: 50px;
 
 }
@@ -445,8 +498,36 @@ ul {
     padding-top: 65px;
     padding-left: 103px;
 }
-@media only screen and (max-width : 768px)
-{
+
+/*laptop*/
+@media only screen and (max-width: 1200px) {
+    .homes_guests_loves_main_name_place, .homes_guests_loves_main_name_hotel {
+        font-size: 100%;
+        padding-top: 8px;
+        line-height: 18px;
+    }
+
+    .homes_guests_loves_main_name_hotel {
+        padding-top: 16px;
+    }
+
+    .homes_guests_loves {
+        max-height: 655px;
+    }
+
+    .arrow_position {
+        position: absolute;
+        right: -23px;
+        top: 45%;
+    }
+
+    .homes_guests_loves_main {
+        padding-top: 75px;
+    }
+}
+
+/*mobile*/
+@media only screen and (max-width: 767px) {
     :root {
         --col-width: calc(100% * 1 / 6);
     }
@@ -477,8 +558,8 @@ ul {
 
     .top_section_conteiner {
         background-position: right;
-        padding-left: calc(var(--col-width) / 3);
-        padding-right: calc(var(--col-width) / 3);
+        padding-left: 15px;
+        padding-right: 15px;
     }
 
     .logo_trip_house {
@@ -522,7 +603,7 @@ ul {
     .discoverStays {
         font-size: 30px;
         padding-top: 50px;
-        line-height: 35px
+        line-height: 35px;
     }
 
     .top_section_main_general_label {
@@ -575,10 +656,10 @@ ul {
 
     /*Offer*/
     .what_do_we_offer_conteiner {
-        padding: 25px calc(var(--one-col-width) / 2) 40px;
+        padding: 25px 15px 40px;
     }
 
-    .what_do_we_offer_header_h2 {
+    .what_do_we_offer_header_h2, .homes_guests_loves_header_h2 {
         display: flex;
         font-size: 28px;
         padding: 0;
@@ -633,6 +714,60 @@ ul {
     .like_real_guest_reviews {
         width: 64px;
         height: 58px;
+    }
+
+    /* homes_guests_loves*/
+    .homes_guests_loves_conteiner {
+        padding-top: 40px;
+    }
+
+    .homes_guests_loves {
+        max-height: 355px;
+    }
+
+    .homes_guests_loves_main {
+        padding-top: 30px;
+        max-width: calc(100% - 2 * 15px);
+        justify-content: space-evenly;
+    }
+
+    .hotel_leopold, .appartment_sunshine {
+        padding-right: 15px;
+    }
+
+    .appartment_sunshine {
+        padding: 0;
+    }
+
+    .villa_kunerad, .hostel_friendship {
+        display: none;
+    }
+
+    figure img {
+        max-width: 155px;
+        max-height: 155px;
+    }
+
+    .homes_guests_loves_main_name_place, .homes_guests_loves_main_name_hotel {
+        font-size: 12px;
+        padding-top: 4px;
+        line-height: 14px;
+        display: flex;
+    }
+
+    .homes_guests_loves_main_name_hotel {
+        padding-top: 8px;
+    }
+
+    .arrows_right {
+        width: 28px;
+        height: 28px;
+    }
+
+    .arrow_position {
+        position: absolute;
+        right: -15px;
+        top: 40%;
     }
 
     /*footer*/
