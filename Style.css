@@ -27,7 +27,7 @@
     --secondary-text: #BFBFBF;
     --bg-color-main: #EAF0F9;
     --one-col-width: calc(100% * 1 / 14);
-    --one-col-md-width: calc(100% * 1 / 6);
+    /*--one-col-md-width: calc(100% * 1 / 6);*/
 
 }
 
@@ -325,14 +325,14 @@ body {
 
 }
 
-.what_do_we_offer_header_heading120, .homes_guests_loves_header_heading120 {
+.what_do_we_offer_header_heading120, .homes_guests_loves_header_heading120,.the_best_destinations_header_heading120 {
     box-sizing: border-box;
     display: flex;
     justify-content: center;
 
 }
 
-.what_do_we_offer_header_h2, .homes_guests_loves_header_h2 {
+.what_do_we_offer_header_h2, .homes_guests_loves_header_h2,.the_best_destinations_header_h2 {
     font: 500 40px Roboto;
     color: var(--text-color-main);
     margin: 0;
@@ -392,6 +392,7 @@ body {
 }
 
 /*homes_guests_loves*/
+
 .homes_guests_loves {
     box-sizing: border-box;
     height: 830px;
@@ -399,7 +400,7 @@ body {
     margin: 0;
 }
 
-.homes_guests_loves_main {
+.homes_guests_loves_main,.the_best_destinations_main {
     display: flex;
     justify-content: space-between;
     box-sizing: border-box;
@@ -414,7 +415,7 @@ figure {
     margin: 0;
 }
 
-.hotel_leopold, .appartment_sunshine, .villa_kunerad {
+.hotel_leopold, .appartment_sunshine, .villa_kunerad, .maldives, .spain, .norway {
     padding-right: 15px;
 }
 
@@ -427,34 +428,193 @@ figure img {
     object-fit: cover;
 }
 
-.homes_guests_loves_main_name_hotel, .homes_guests_loves_main_name_place {
+.homes_guests_loves_main_name_hotel, .homes_guests_loves_main_name_place,.the_best_destinations_country {
     font: 400 24px Roboto;
     line-height: 28px;
     color: var(--primary);
     padding-top: 24px;
+    padding-left: 5px;
 }
 
 .homes_guests_loves_main_name_place {
     color: var(--secondary-text);
 }
 
-.arrows_right {
+.arrow_right {
     width: 40px;
     height: 40px;
-
 }
 
-.arrow_position {
+.arrow_position_right {
     position: absolute;
     right: -20px;
     top: 43%;
 }
+/*the best destination*/
+
+.the_best_destinations {
+    box-sizing: border-box;
+    /*height: 960px;*/
+    background-color: var(--general-white);
+    margin: 0;
+}
+
+.the_best_destinations_main__buttons {
+    padding-top: 104px;
+    padding-left: var(--one-col-width);
+    display: flex;
+    justify-content: flex-start;
+}
+
+.the_best_destinations_main__buttons__bg {
+    background-color: var(--stroke-color-main);
+    border-radius: 8px;
+}
+
+#button-regions,#button-cities,#button-place {
+    font: 400 24px Roboto;
+    color: var(--general-white);
+    height: 65px;
+    width: 190px; /*190px*/
+    background: var(--primary);
+    border-radius: 8px;
+    border: none;
+    outline: none;
+    padding: 0;
+}
+
+#button-cities,#button-place {
+    color: var(--text-color-main);
+    background: var(--stroke-color-main);
+}
+/* для переключения кнопок по цветам
+#button-regions,#button-cities,#button-place{
+    color: var(--text-color-main);
+    background: var(--stroke-color-main);
+    font: 400 24px Roboto;
+    height: 65px;
+    width: 190px;
+    border-radius: 8px;
+    border: none;
+    outline: none;
+    padding: 0;
+
+}
+#button-regions:focus, #button-cities:focus, #button-place:focus {
+    color: var(--general-white);
+    background: var(--primary);
+}
+*/
+
+#button-place {
+    width: 240px;
+}
+
+.the_best_destinations_main {
+    padding-top: 65px;
+}
+.maldives, .spain, .norway, .island {
+    position: relative;
+}
+
+.maldives img:hover, .spain img:hover, .norway img:hover, .island img:hover {
+    filter: brightness(60%);
+    transition: .3s;}
+
+.maldives .btn, .spain .btn,.norway .btn,.island .btn,.btn_sign_up {
+    display: none;
+    position: absolute;
+    top: 43%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: var(--general-white);
+    color: var(--primary);
+    font: 400 18px 'Roboto';
+    padding: 13px 24px;
+    border: 1px solid #3077C6;
+    border-radius: 8px;
+    outline: none;
+}
+
+.maldives:hover .btn, .spain:hover .btn,.norway:hover .btn,.island:hover .btn {
+    display: inline-block;
+}
+.the_best_destinations__arrow_position_right {
+    display: none;
+}
+.arrow_bottom {
+    width: 40px;
+    height: 40px;
+}
+.arrow_position_bottom {
+    display: flex;
+    justify-content: center;
+    padding-top: 65px;
+}
+/*sign up*/
+
+.sign_up{
+    box-sizing: border-box;
+    display: flex;
+    width: calc(100% - var(--one-col-width) * 2 );
+    height: 200px;
+    background-color: var(--bg-color-main);
+    margin: 120px auto 0;
+    position: relative;
+}
+
+.user{
+    width: 85px;
+    height: 85px;
+}
+.user_position {
+    position: absolute;
+    top:57px;
+    left: 25px;
+}
+.logo_sign_up_position {
+    display: none;
+}
+.close1 {
+    width: 25px;
+    height: 25px;
+}
+.close1_position{
+    position: absolute;
+    top:25px;
+    right: 25px;
+}
+.btn_sign_up {
+    display: inline-block;
+    top:100px;
+    left: 135px;
+    transform: unset;
+}
+
+.sign_up_get_sale_for_desktop {
+    font: 500 24px 'Roboto';
+    line-height: 28px;
+    position: absolute;
+    top: 50px;
+    left: 135px;
+    margin: 0;
+    color: var(--text-color-main);
+}
+
+.sign_up_get_sale_for_mobile {
+    display: none;
+}
+
+.sign_up_install{
+    display: none;
+}
+
+/*footer*/
 
 footer {
     box-sizing: border-box;
     height: 630px;
     background-color: var(--primary-dark);
-
 }
 
 .logo_trip_house_for_footer {
@@ -462,11 +622,11 @@ footer {
 }
 
 .footer_navigation {
-    max-width: 73.88%; /*1064px / 14440*/
+    max-width: calc(100% - var(--one-col-width) * 2);/*73.88%; /*1064px / 14440*/
     display: flex;
     justify-content: space-between;
-    padding-left: 104px;
     padding-top: 115px;
+    margin: 0 auto;
 
 }
 
@@ -499,23 +659,147 @@ ul {
     padding-left: 103px;
 }
 
-/*laptop*/
-@media only screen and (max-width: 1200px) {
-    .homes_guests_loves_main_name_place, .homes_guests_loves_main_name_hotel {
-        font-size: 100%;
-        padding-top: 8px;
+/*laptop щсталось дописать на топ и вот ду ви офер*/
+@media (max-width: 1024px) {
+    .col-md-1 {
+        width: var(--one-col-width);
+    }
+
+    .col-md-2 {
+        width: calc(var(--one-col-width) * 2);
+    }
+
+    .col-md-3 {
+        width: calc(var(--one-col-width) * 3);
+    }
+
+    .col-md-4 {
+        width: calc(var(--one-col-width) * 4);
+    }
+
+    .col-md-5 {
+        width: calc(var(--one-col-width) * 5);
+    }
+
+    .col-md-6 {
+        width: calc(var(--one-col-width) * 6);
+    }
+
+    .col-md-7 {
+        width: calc(var(--one-col-width) * 7); /*50%*/
+    }
+
+    .col-md-8 {
+        width: calc(var(--one-col-width) * 8);
+    }
+
+    .col-md-9 {
+        width: calc(var(--one-col-width) * 9);
+    }
+
+    .col-md-10 {
+        width: calc(var(--one-col-width) * 10);
+    }
+
+    .col-md-11 {
+        width: calc(var(--one-col-width) * 11);
+    }
+
+    .col-md-12 {
+        width: calc(var(--one-col-width) * 12);
+    }
+
+    .col-md-13 {
+        width: calc(var(--one-col-width) * 13);
+    }
+
+    .col-md-14 {
+        width: 100%;
+    }
+    /*top section*/
+    .discoverStays {
+        font: 500 45px Roboto;
+        line-height: 50px;
+        padding-top: 150px;
+    }
+    /*thinking about form*/
+    .top_section_main_general_label {
+        display: none;
+    }
+
+    .top_section_all_form {
+        padding-top: 50px;
+    }
+
+    .top_section_main_form {
+        display: flex;
+        flex-wrap: wrap;
+        float: left;
+        box-sizing: border-box;
+        flex-direction: column;
+        align-content: space-around;
+        justify-content: center;
+        height: 40vh;
+        background-color: var(--secondary);
+        border-radius: 0;
+    }
+
+    #top_section_main_input_for_check-in_check-out {
+        height: 48px;
+        width: 100%;
+        background-color: var(--secondary);
+        border: none;
+    }
+
+    #check-in, #check-out {
+        height: 48px;
+        width: 50%; /*152px*/
+        border-radius: 8px;
+        margin: 0 4px 4px 14px;
+    }
+    #check-out {
+        margin: 0 14px 4px 4px;
+    }
+
+    #destination, #information_about_order, #input-button {
+        height: 48px;
+        width: 97%; /*312px / 328*/
+        border-radius: 8px;
+        margin: 8px 8px 8px;
+        outline: none;
+    }
+    #input-button {
+        margin-top: 4px;
+    }
+
+    .top_section_main_AppStore_GooglePlay {
+        padding-top: 60px;
+
+    }
+
+    .what_do_we_offer_header_h2, .homes_guests_loves_header_h2, .the_best_destinations_header_h2 {
+        padding-top: 90px;
+    }
+
+    .homes_guests_loves_main_name_place, .homes_guests_loves_main_name_hotel, .the_best_destinations_country {
+        font-size: 18px;
+        padding-top: 14px;
         line-height: 18px;
     }
 
     .homes_guests_loves_main_name_hotel {
-        padding-top: 16px;
+        padding-top: 20px;
     }
 
     .homes_guests_loves {
-        max-height: 655px;
+        max-height: 650px;
     }
 
-    .arrow_position {
+    .homes_guests_loves_main {
+        padding-top: 75px;
+    }
+
+    .arrow_position_right {
         position: absolute;
         right: -23px;
         top: 45%;
@@ -524,36 +808,117 @@ ul {
     .homes_guests_loves_main {
         padding-top: 75px;
     }
+
+    /*best destinations*/
+    .the_best_destinations_main__buttons {
+        padding-top: 70px;
+    }
+
+    .the_best_destinations {
+        max-height: 600px; /*на глаз*/
+    }
+
+    .the_best_destinations_main__buttons__bg {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    #button-regions, #button-cities, #button-place {
+        font: 400 23px Roboto;
+        height: 45px;
+        width: 120px;
+    }
+
+    #button-place span {
+        display: none;
+    }
+
+    .arrow_position_bottom {
+        padding-top: 40px;
+    }
+
+    .arrow_bottom {
+        width: 35px;
+        height: 35px;
+    }
+
+    /*sign up*/
+    .sign_up {
+        height: 150px;
+        margin: 120px auto 0;
+    }
+
+    .user {
+        width: 75px;
+        height: 75px;
+    }
+
+    .user_position {
+        top: 40px;
+    }
+
+    .btn_sign_up {
+        top: 80px;
+        font-size: 16px;
+    }
+
+    .sign_up_get_sale_for_desktop {
+        font-size: 22px;
+        top: 30px;
+    }
+
+    /*footer*/
+    footer {
+        height: 500px;
+    }
+    .footer_navigation {
+        padding-top: 70px;
+    }
+
+    .footer_navigation_heading {
+        font-size: 19px;
+        line-height: 50px;
+    }
+
+    .footer_navigation_list {
+        font-size: 18px;
+        line-height: 40px;
+    }
+
+    .footer_copyright {
+        padding-left: var(--one-col-width);
+    }
 }
 
-/*mobile*/
+
+/*mobile */
 @media only screen and (max-width: 767px) {
     :root {
         --col-width: calc(100% * 1 / 6);
     }
 
-    .col-md-1 {
+    .col-sm-1 {
         width: var(--col-width);
     }
 
-    .col-md-2 {
+    .col-sm-2 {
         width: calc(var(--col-width) * 2);
     }
 
-    .col-md-3 {
+    .col-sm-3 {
         width: calc(var(--col-width) * 3); /* 50% */
     }
 
-    .col-md-4 {
+    .col-sm-4 {
         width: calc(var(--col-width) * 4);
     }
 
-    .col-md-5 {
+    .col-sm-5 {
         width: calc(var(--col-width) * 5);
     }
 
-    .col-md-6 {
-        width: calc(var(--col-width) * 6);
+    .col-sm-6 {
+        width: 100%;
     }
 
     .top_section_conteiner {
@@ -606,65 +971,17 @@ ul {
         line-height: 35px;
     }
 
-    .top_section_main_general_label {
-        display: none;
-    }
-
-    .top_section_all_form {
-        padding-top: 30px;
-    }
-
-    .top_section_main_form {
-        display: flex;
-        flex-wrap: wrap;
-        float: left;
-        box-sizing: border-box;
-        flex-direction: column;
-        align-content: space-around;
-        height: 40vh;
-        background-color: var(--secondary);
-        border-radius: 0;
-    }
-
-    #top_section_main_input_for_check-in_check-out {
-        height: 48px;
-        width: 100%;
-        background-color: var(--secondary);
-        border: none;
-    }
-
-    #check-in, #check-out {
-        height: 48px;
-        width: 50%; /*152px*/
-        border-radius: 8px;
-        margin: 0 8px 8px 8px;
-    }
-
-
-    #destination, #information_about_order, #input-button {
-        height: 48px;
-        width: 95%; /*312px / 328*/
-        border-radius: 8px;
-        margin: 8px 8px 8px;
-        outline: none;
-    }
-
-    .top_section_main_AppStore_GooglePlay {
-        padding-top: 30px;
-
-    }
 
     /*Offer*/
     .what_do_we_offer_conteiner {
         padding: 25px 15px 40px;
     }
 
-    .what_do_we_offer_header_h2, .homes_guests_loves_header_h2 {
+    .what_do_we_offer_header_h2, .homes_guests_loves_header_h2,.the_best_destinations_header_h2 {
         display: flex;
         font-size: 28px;
         padding: 0;
         justify-content: center;
-
     }
 
     .what_do_we_offer_header_h2::after {
@@ -717,7 +1034,8 @@ ul {
     }
 
     /* homes_guests_loves*/
-    .homes_guests_loves_conteiner {
+
+    .homes_guests_loves_conteiner,.the_best_destinations_conteiner {
         padding-top: 40px;
     }
 
@@ -725,21 +1043,20 @@ ul {
         max-height: 355px;
     }
 
-    .homes_guests_loves_main {
+    .homes_guests_loves_main,.the_best_destinations_main {
         padding-top: 30px;
-        max-width: calc(100% - 2 * 15px);
-        justify-content: space-evenly;
+        min-width: calc(100% - 2 * 15px);
+        justify-content: space-between;
     }
 
-    .hotel_leopold, .appartment_sunshine {
+    .hotel_leopold, .appartment_sunshine, .villa_kunerad, .maldives, .spain, .norway {
+        padding-right: unset;
+    }
+    .hotel_leopold,.maldives {
         padding-right: 15px;
     }
 
-    .appartment_sunshine {
-        padding: 0;
-    }
-
-    .villa_kunerad, .hostel_friendship {
+    .villa_kunerad, .hostel_friendship,.norway,.island {
         display: none;
     }
 
@@ -748,29 +1065,136 @@ ul {
         max-height: 155px;
     }
 
-    .homes_guests_loves_main_name_place, .homes_guests_loves_main_name_hotel {
+    .homes_guests_loves_main_name_place, .homes_guests_loves_main_name_hotel,.the_best_destinations_country {
         font-size: 12px;
         padding-top: 4px;
         line-height: 14px;
         display: flex;
     }
 
-    .homes_guests_loves_main_name_hotel {
+    .homes_guests_loves_main_name_hotel,.the_best_destinations_country {
         padding-top: 8px;
     }
 
-    .arrows_right {
+    .arrow_right {
         width: 28px;
         height: 28px;
     }
 
-    .arrow_position {
+    .arrow_position_right {
+        position: absolute;
+        right: -15px;
+        top: 40%;
+    }
+    /*best_destinations*/
+
+    .the_best_destinations {
+        max-height: 380px;
+    }
+
+    .the_best_destinations_main__buttons{
+        padding: 30px 15px 25px;
+        max-width: calc(100% - 2 * 15px);
+        justify-content: space-between;
+    }
+    .the_best_destinations_main__buttons__bg{
+        background-color: unset;
+        border-radius: unset;
+        display: flex;
+        justify-content: space-between;
+    }
+    #button-regions,#button-cities,#button-place{
+        font: 400 19px Roboto;
+        line-height: 21px;
+        height: 35px;
+        width: 100px;
+        border-radius: 4px;
+        color: var(--text-color-main);
+        background: var(--general-white);
+        border: 1px solid var(--stroke-color-main);
+    }
+
+    #button-regions:hover, #button-regions:focus, #button-cities:hover, #button-cities:focus,#button-place:hover,#button-place:focus {
+        color: var(--general-white);
+        background: var(--primary);
+        border: none;
+        outline: none;
+    }
+     #button-place span {
+     display: none;
+    }
+
+    .maldives:hover .btn, .spain:hover .btn,.norway:hover .btn,.island:hover .btn {
+        display: none;
+    }
+
+    .the_best_destinations_main{
+        padding-top: 0;
+    }
+    .arrow_position_bottom {
+        display: none;
+    }
+    .the_best_destinations__arrow_position_right {
+        display: block;
         position: absolute;
         right: -15px;
         top: 40%;
     }
 
-    /*footer*/
+    /*sign up*/
+    .sign_up {
+        max-height: 110px;
+        width: unset;
+        background-color: var(--general-white);
+        margin:0 auto;
+    }
+    .sign_up_container{
+        display: flex;
+        padding: 25px 15px;
+        min-width: calc(100% - 2 * 15px);
+        justify-content: space-between;
+        align-items: center;
+        vertical-align: baseline;
+        /*margin: auto;*/
+    }
+    .user_position,.btn_sign_up,.sign_up_get_sale_for_desktop {
+       display: none;
+    }
+    .close1 {
+        width: 15px;
+        height: 15px;
+        padding-right: 15px;
+    }
+    .close1_position{
+        position: unset;
+    }
+
+    .logo_sign_up {
+        width: 58px;
+        height: 58px;
+        padding-right: 15px;
+    }
+    .logo_sign_up_position {
+        display: block;
+    }
+
+    .sign_up_get_sale_for_mobile {
+        display: flex;
+        font: 400 12px 'Roboto';
+        line-height: 14px;
+        width: 50%;
+        position: unset;
+        padding-right: 15px;
+        color: var(--text-color-main);
+    }
+    .sign_up_install {
+        display: block;
+        font: 500 14px 'Roboto';
+        line-height: 16px;
+        color: var(--primary);
+        text-decoration: none;
+    }
+        /*footer*/
     .footer_conteiner {
         padding: 40px calc(var(--one-col-width) / 2);
     }
