@@ -80,9 +80,11 @@
     .col-12 {
         width: calc(var(--one-col-width) * 12);
     }
+
     .col-13 {
         width: calc(var(--one-col-width) * 13);
     }
+
     .col-14 {
         width: calc(var(--one-col-width) * 14);
     }
@@ -166,7 +168,9 @@ body {
     margin: 0;
 }
 
+
 .stays:hover::after,.attractions:hover::after {
+
     content: "";
     height: 4px;
     width: 50px;
@@ -233,7 +237,6 @@ body {
     font: 400 18px Roboto;
     padding: 0;
 }
-
 
 #destination:focus, #information_about_order:focus, #top_section_main_input_for_check-in_check-out:focus {
     border-radius: 8px;
@@ -643,6 +646,205 @@ ul {
     footer {
         max-height: 205px;
     }
+
+@media only screen and (max-width: 768px) {
+    :root {
+        --col-width: calc(100% * 1 / 6);
+    }
+
+    .col-md-1 {
+        width: var(--col-width);
+    }
+
+    .col-md-2 {
+        width: calc(var(--col-width) * 2);
+    }
+
+    .col-md-3 {
+        width: calc(var(--col-width) * 3); /* 50% */
+    }
+
+    .col-md-4 {
+        width: calc(var(--col-width) * 4);
+    }
+
+    .col-md-5 {
+        width: calc(var(--col-width) * 5);
+    }
+
+    .col-md-6 {
+        width: calc(var(--col-width) * 6);
+    }
+
+    .top_section_conteiner {
+        background-position: right;
+        padding-left: calc(var(--col-width) / 3);
+        padding-right: calc(var(--col-width) / 3);
+    }
+
+    .logo_trip_house {
+        width: 125px;
+        height: 25px;
+    }
+
+    .stays, .attractions {
+        display: none;
+    }
+
+    .night {
+        width: 16px;
+        height: 16px;
+    }
+
+    .account_circle {
+        width: 24px;
+        height: 24px;
+    }
+
+    .top_section_menu {
+        width: 24px;
+        height: 16px;
+        display: flex;
+    }
+
+    .top_section_header {
+        padding-top: 15px;
+        align-items: center;
+    }
+
+    .top_section_header_stays_attractions_night_accountCircle {
+        justify-content: flex-end;
+    }
+
+    .top_section_header_stays_attractions, .stays, .attractions {
+        display: none;
+    }
+
+    .discoverStays {
+        font-size: 30px;
+        padding-top: 50px;
+        line-height: 35px
+    }
+
+    .top_section_main_general_label {
+        display: none;
+    }
+
+    .top_section_all_form {
+        padding-top: 30px;
+    }
+
+    .top_section_main_form {
+        display: flex;
+        flex-wrap: wrap;
+        float: left;
+        box-sizing: border-box;
+        flex-direction: column;
+        align-content: space-around;
+        height: 40vh;
+        background-color: var(--secondary);
+        border-radius: 0;
+    }
+
+    #top_section_main_input_for_check-in_check-out {
+        height: 48px;
+        width: 100%;
+        background-color: var(--secondary);
+        border: none;
+    }
+
+    #check-in, #check-out {
+        height: 48px;
+        width: 50%; /*152px*/
+        border-radius: 8px;
+        margin: 0 8px 8px 8px;
+    }
+
+
+    #destination, #information_about_order, #input-button {
+        height: 48px;
+        width: 95%; /*312px / 328*/
+        border-radius: 8px;
+        margin: 8px 8px 8px;
+        outline: none;
+    }
+
+    .top_section_main_AppStore_GooglePlay {
+        padding-top: 30px;
+
+    }
+
+    /*Offer*/
+    .what_do_we_offer_conteiner {
+        padding: 25px calc(var(--one-col-width) / 2) 40px;
+    }
+
+    .what_do_we_offer_header_h2 {
+        display: flex;
+        font-size: 28px;
+        padding: 0;
+        justify-content: center;
+
+    }
+
+    .what_do_we_offer_header_h2::after {
+        display: none;
+    }
+
+    .what_do_we_offer_main {
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .what_do_we_offer_header_heading120 {
+        padding: 0;
+        justify-content: center;
+    }
+
+    .what_do_we_offer_main_icons {
+        font-size: 15px;
+        padding-top: 35px;
+        flex-wrap: wrap;
+
+    }
+
+    .what_do_we_offer_main_iconsName {
+        padding-top: 15px;
+        margin: 0 auto;
+    }
+
+    .headphones_support {
+        width: 53px;
+        height: 64px;
+    }
+
+    .communicate_directly {
+        width: 58px;
+        height: 58px;
+    }
+
+    .book_online {
+        width: 70px;
+        height: 47px;
+    }
+
+    .like_real_guest_reviews {
+        width: 64px;
+        height: 58px;
+    }
+
+    /*footer*/
+    .footer_conteiner {
+        padding: 40px calc(var(--one-col-width) / 2);
+    }
+
+    footer {
+        max-height: 205px;
+    }
+
 
     .logo_trip_house_for_footer {
         display: flex;
