@@ -96,7 +96,7 @@ body {
 }
 
 
-.top_section {
+.top_wrapper {
 
     box-sizing: border-box;
     max-height: 900px;
@@ -108,7 +108,7 @@ body {
 
 }
 
-.top_section_conteiner {
+.top_container {
     padding-left: var(--one-col-width);
     padding-right: var(--one-col-width);
     margin-left: auto;
@@ -410,15 +410,16 @@ body {
     position: relative;
 }
 
-figure {
+.hotel_leopold, .appartment_sunshine, .villa_kunerad,.hostel_friendship{
     margin: 0;
-}
-
-.hotel_leopold, .appartment_sunshine, .villa_kunerad {
     padding-right: 15px;
 }
 
-figure img {
+.hostel_friendship {
+    padding-right: 0;
+}
+
+.hotel_leopold img, .appartment_sunshine img, .villa_kunerad img,.hostel_friendship img {
     width: 100%;
     max-width: 295px;
     height: 100%;
@@ -429,7 +430,7 @@ figure img {
 
 .homes_guests_loves_main_name_hotel, .homes_guests_loves_main_name_place {
     font: 400 24px Roboto;
-    line-height: 28px;
+    line-height: 30px;
     color: var(--primary);
     padding-top: 24px;
 }
@@ -438,16 +439,15 @@ figure img {
     color: var(--secondary-text);
 }
 
-.arrows_right {
+.arrow_right {
     width: 40px;
     height: 40px;
-
 }
 
-.arrow_position {
+.arrow_position_right {
     position: absolute;
     right: -20px;
-    top: 43%;
+    top: calc((100% - 40px) / 2);/*43%;*/
 }
 
 footer {
@@ -500,7 +500,65 @@ ul {
 }
 
 /*laptop*/
-@media only screen and (max-width: 1200px) {
+@media only screen and (max-width: 1024px) {
+    /*top section*/
+    .discoverStays {
+        font-size:45px;
+        line-height: 50px;
+        padding-top: 150px;
+    }
+
+    .top_section_main_general_label {
+        display: none;
+    }
+
+    .top_section_all_form {
+        padding-top: 50px;
+    }
+
+    .top_section_main_form {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        height: 35vh;
+        background-color: var(--secondary);
+        border-radius: 0;
+    }
+
+    #top_section_main_input_for_check-in_check-out {
+        height: 48px;
+        width: 100%;
+        background-color: var(--secondary);
+        border: none;
+    }
+
+    #check-in, #check-out {
+        height: 48px;
+        width: 50%; /*152px*/
+        border-radius: 8px;
+        margin: 0 4px 4px 8px;
+    }
+
+    #check-out {
+        margin: 0 8px 4px 4px;
+    }
+
+    #destination, #information_about_order, #input-button {
+        height: 48px;
+        width: 97%; /*312px / 328*/
+        border-radius: 8px;
+        margin: 8px 8px 8px;
+        outline: none;
+    }
+
+    #input-button {
+        margin-top: 4px;
+    }
+
+    .top_section_main_AppStore_GooglePlay {
+        padding-top: 60px;
+    }
+
     .homes_guests_loves_main_name_place, .homes_guests_loves_main_name_hotel {
         font-size: 100%;
         padding-top: 8px;
@@ -515,7 +573,7 @@ ul {
         max-height: 655px;
     }
 
-    .arrow_position {
+    .arrow_position_right {
         position: absolute;
         right: -23px;
         top: 45%;
@@ -527,7 +585,7 @@ ul {
 }
 
 /*mobile*/
-@media only screen and (max-width: 767px) {
+@media only screen and (max-width: 768px) {
     :root {
         --col-width: calc(100% * 1 / 6);
     }
@@ -556,7 +614,9 @@ ul {
         width: calc(var(--col-width) * 6);
     }
 
-    .top_section_conteiner {
+    /*top*/
+
+    .top_container {
         background-position: right;
         padding-left: 15px;
         padding-right: 15px;
@@ -599,6 +659,9 @@ ul {
     .top_section_header_stays_attractions, .stays, .attractions {
         display: none;
     }
+    .top_section_header_night_accountCircle {
+        width: 95px;
+    }
 
     .discoverStays {
         font-size: 30px;
@@ -606,65 +669,16 @@ ul {
         line-height: 35px;
     }
 
-    .top_section_main_general_label {
-        display: none;
-    }
-
-    .top_section_all_form {
-        padding-top: 30px;
-    }
-
-    .top_section_main_form {
-        display: flex;
-        flex-wrap: wrap;
-        float: left;
-        box-sizing: border-box;
-        flex-direction: column;
-        align-content: space-around;
-        height: 40vh;
-        background-color: var(--secondary);
-        border-radius: 0;
-    }
-
-    #top_section_main_input_for_check-in_check-out {
-        height: 48px;
-        width: 100%;
-        background-color: var(--secondary);
-        border: none;
-    }
-
-    #check-in, #check-out {
-        height: 48px;
-        width: 50%; /*152px*/
-        border-radius: 8px;
-        margin: 0 8px 8px 8px;
-    }
-
-
-    #destination, #information_about_order, #input-button {
-        height: 48px;
-        width: 95%; /*312px / 328*/
-        border-radius: 8px;
-        margin: 8px 8px 8px;
-        outline: none;
-    }
-
-    .top_section_main_AppStore_GooglePlay {
-        padding-top: 30px;
-
-    }
-
     /*Offer*/
-    .what_do_we_offer_conteiner {
+    .what_do_we_offer_container {
         padding: 25px 15px 40px;
     }
 
-    .what_do_we_offer_header_h2, .homes_guests_loves_header_h2 {
+    .what_do_we_offer_header_h2, .homes_guests_loves_header_h2, .the_best_destinations_header_h2, .guests_reviews_header_h2_for_mobile {
         display: flex;
         font-size: 28px;
         padding: 0;
         justify-content: center;
-
     }
 
     .what_do_we_offer_header_h2::after {
@@ -688,9 +702,7 @@ ul {
         font-size: 15px;
         padding-top: 35px;
         flex-wrap: wrap;
-
     }
-
     .what_do_we_offer_main_iconsName {
         padding-top: 15px;
         margin: 0 auto;
@@ -717,7 +729,7 @@ ul {
     }
 
     /* homes_guests_loves*/
-    .homes_guests_loves_conteiner {
+    .homes_guests_loves_container, .the_best_destinations_container, .guests_reviews_container {
         padding-top: 40px;
     }
 
@@ -725,53 +737,52 @@ ul {
         max-height: 355px;
     }
 
-    .homes_guests_loves_main {
+    .homes_guests_loves_main, .the_best_destinations_main, .guests_reviews_main {
         padding-top: 30px;
-        max-width: calc(100% - 2 * 15px);
+        min-width: calc(100% - 2 * 15px);
         justify-content: space-evenly;
     }
 
-    .hotel_leopold, .appartment_sunshine {
+    .hotel_leopold, .appartment_sunshine, .villa_kunerad, .maldives, .spain, .norway {
+        padding-right: unset;
+    }
+
+    .hotel_leopold, .maldives {
         padding-right: 15px;
     }
-
-    .appartment_sunshine {
-        padding: 0;
-    }
-
-    .villa_kunerad, .hostel_friendship {
+    .villa_kunerad, .hostel_friendship, .norway, .island {
         display: none;
     }
 
-    figure img {
+    .hotel_leopold img, .appartment_sunshine img, .villa_kunerad img,.hostel_friendship img {
         max-width: 155px;
         max-height: 155px;
     }
 
-    .homes_guests_loves_main_name_place, .homes_guests_loves_main_name_hotel {
+    .homes_guests_loves_main_name_place, .homes_guests_loves_main_name_hotel, .the_best_destinations_country {
         font-size: 12px;
         padding-top: 4px;
         line-height: 14px;
         display: flex;
     }
 
-    .homes_guests_loves_main_name_hotel {
+    .homes_guests_loves_main_name_hotel, .the_best_destinations_country {
         padding-top: 8px;
     }
 
-    .arrows_right {
+    .arrow_right {
         width: 28px;
         height: 28px;
     }
 
-    .arrow_position {
+    .arrow_position_right {
         position: absolute;
         right: -15px;
         top: 40%;
     }
 
     /*footer*/
-    .footer_conteiner {
+    .footer_container {
         padding: 40px calc(var(--one-col-width) / 2);
     }
 
